@@ -8,7 +8,42 @@
 </head>
 <body>
 
+
+
+<div class="navbar navbar-default navbar-fixed-top" id="mojNav" role="navigation">
+			<div class="navbar-header">
+				<div class="container">
+					<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button" id="menibutton">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+				
+					</button>
+
+			</div><!-- navbar-header -->		
+
+			<div class="navbar-collapse collapse" id="navNav">
+				<ul class="nav navbar-nav">
+					<li>
+						<%= link_to "Home", root_path %>
+					</li>
+					<li>
+						<a href="#">Blog</a>
+					</li>
+					<li>
+						<a href="#">O nama</a>
+					</li>
+					<li>
+						<a href="#">Kontakt</a>
+					</li>
+				</ul><!-- end navbar-nav -->
+			</div><!-- navbar-inverse -->
+	</div><!-- end navbar-container -->
+</div><!-- end navbar -->
 <%= yield %>
+
+<!-- First try for the online version of jQuery
+	<script src="http://code.jquery.com/jquery.js"></script>-->
 
 </body>
 </html>

@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+	background: rgb(235, 238, 243);
+
+}
+#mojNav {
+
+	background: transparent;
+	text-shadow: black 0.1em 0.1em 0.2em;
+	-webkit-font-smoothing: antialiased;
+   	text-rendering: optimizelegibility;
+   	font-size: 18px;
+	border: none;
+	
+	
+}
+
+#navNav {
+	
+	text-align: center;
+	.navbar-nav {
+		display: inline-block;
+		float: none;
+		vertical-align: top;
+	li {
+		padding-left: 100px;
+	}
+	}
+}
+
+#mojSlide {
+	margin-top: 30px;
+}
+
+/* --------------------------------------
+   Carousel
+   -------------------------------------- */
+
+.carousel-caption {
+   font-size: 24px;
+}
+
+.carousel-caption h4 {
+   font-size: 32px;
+}
+
+
+#myCarousel .item { 
+	height: 100vh; /* 100% vertikalnog prostora */
+	}
+
+
+
+#slide1 {
+
+   background: url('wallpapper.jpg') top center no-repeat;
+}
+
+#slide2 {
+   background: url('slideshow-test-optimised-21.jpg') top center no-repeat;
+}
+
+#slide3 {
+   background: url('slideshow-test-optimised.jpg') top center no-repeat;
+}
