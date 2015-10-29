@@ -42,6 +42,12 @@ body {
 	li {
 		padding-left: 100px;
 	}
+	a {
+		color: white;
+	}
+	a:hover {
+    	color: #333;
+	}
 	}
 }
 
@@ -100,4 +106,4 @@ body {
 
 #slide3 {
    background: url('slideshow-test-optimised.jpg') top center no-repeat;
-}
+} 
