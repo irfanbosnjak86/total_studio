@@ -1,0 +1,23 @@
+<%= simple_form_for @post, html: { multipart: true } do |f| %>
+	<% if @post.errors.any? %>
+		<div id="errors">
+			<p><%= @post.errors.count %> Prevented this post from saving </p>
+			<ul>
+				<% @post.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<div class="panel-body">
+
+		<%= f.input :title, input_html: { class: 'form-control' } %>
+		<br>
+		<%= f.input :description, input_html: { class: 'form-control' } %>
+		<br>
+
+		<%= f.button :submit, class: "btn btn-primary" %> 
+
+	</div>
+<% end %>
