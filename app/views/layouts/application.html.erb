@@ -40,7 +40,12 @@
 			</div><!-- navbar-inverse -->
 	</div><!-- end navbar-container -->
 </div><!-- end navbar -->
-<%= yield %>
+
+	<% flash.each do |name, msg| %>
+		<%= content_tag(:div, msg, class: "alert") %>
+	<% end %><!-- end flash msg -->
+
+	<%= yield %>
 
 <!-- First try for the online version of jQuery
 	<script src="http://code.jquery.com/jquery.js"></script>-->
