@@ -4,7 +4,7 @@
 			<% group.each do |post| %>
 				<div class="col-md-3">
 					<div class="post">
-						<div class="image">						
+						<div>						
 							<%= link_to post do %>
 								<%= image_tag post.image.url(:medium) %>
 							<% end %>
@@ -13,7 +13,7 @@
 						<h2 class="title" id="postTitle"><%= link_to post.title, post %></h2>
 						<p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
 					</div>
-				</div>
+				</div>			
 			<% end %>
 		</div>	
 	<% end %>

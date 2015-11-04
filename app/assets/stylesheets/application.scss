@@ -91,8 +91,11 @@ body {
 /* --------------------------------------
    Pages 
    -------------------------------------- */
-#indexBlog {
+.container {
 	margin-top: 60px;
+}
+#mojButton {
+  margin-top: 0;
 }
 
 h2#postTitle {

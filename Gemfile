@@ -22,10 +22,12 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 #Bootstrap-sass 
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
-#simple_form
+#simple_form 
 gem 'simple_form', '~> 3.2'
-#Paperclip gem za slike
+#Paperclip gem for images.
 gem 'paperclip', '~> 4.3', '>= 4.3.1'
+#Setting images to dropbox
+gem 'paperclip-dropbox', '~> 1.3', '>= 1.3.2'
 
 
 
