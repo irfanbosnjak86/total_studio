@@ -32,29 +32,46 @@ body {
    	font-size: 18px;
 	border: none;
 
-	#navNav {
-	
-	text-align: center;
-	.navbar-nav {
-		display: inline-block;
-		float: none;
-		vertical-align: top;
-		
-		li {
-			padding-left: 100px;
-		}
+  	#navNav {
+  	
+      	text-align: center;
+      	.navbar-nav {
+      		display: inline-block;
+      		float: none;
+      		vertical-align: top;
+      		
+      		li {
+      			padding-left: 100px;
+      		}
 
-		a {
-			color: white;
-		}
+      		a {
+      			color: white;
+      		}
 
-		a:hover {
-	    	color: #333;
-		}
-	}
-}
-	
-}
+      		a:hover {
+      	    	color: #333;
+      		}
+      	}
+    }	
+  }
+
+  #mojNavBlog {
+    font-size: 18px;
+
+    #navNav {
+    
+        text-align: center;
+        .navbar-nav {
+          display: inline-block;
+          float: none;
+          vertical-align: top;
+          
+          li {
+            padding-left: 100px;
+          }
+        }
+      }  
+  }
 
 /* --------------------------------------
    About
