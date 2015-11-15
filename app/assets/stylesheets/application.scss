@@ -58,7 +58,7 @@ body {
   #mojNavBlog {
     font-size: 18px;
 
-    #navNav {
+    #navBlog {
     
         text-align: center;
         .navbar-nav {
@@ -72,37 +72,26 @@ body {
         }
       }  
   }
+  
+#mojButton {
+  margin-top: 0;
+  }
 
 /* --------------------------------------
    About
    -------------------------------------- */
 
-#mojRed {
-
-	display: block;
-	width: auto;
-	height: 45px;
-	background: black;
-}
-
-
 .image-wrapper {
 	img {
 		width: auto;
-		height: 550px;
+		height: auto;
 		border: 2px solid darkgray;
 		margin-left: 50px;
-	} 
-   
-   
-}
-
-.image-wrapper {
-	padding-top: 20px;
+	}   
 }
 
 .page-wrapper {
-	padding-top: 20px;
+	margin-top: 20px;
 }
 
 /* --------------------------------------
@@ -111,9 +100,7 @@ body {
 .container {
 	margin-top: 60px;
 }
-#mojButton {
-  margin-top: 0;
-}
+
 
 h2#postTitle {
 	position: absolute;

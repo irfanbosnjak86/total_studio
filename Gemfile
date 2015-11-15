@@ -28,6 +28,8 @@ gem 'simple_form', '~> 3.2'
 gem 'paperclip', '~> 4.3', '>= 4.3.1'
 #Setting images to dropbox
 gem 'paperclip-dropbox', '~> 1.3', '>= 1.3.2'
+#NEsted forms gem
+gem "cocoon"
 
 
 

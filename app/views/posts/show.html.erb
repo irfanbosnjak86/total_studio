@@ -1,5 +1,8 @@
 <div class="container">
-  <%= image_tag @post.image.url(:medium) %>
+  <% @post.posts_images.each do |posts_images| %>
+    <%= image_tag posts_images.image.url(:medium) %>
+  <% end %>
+
   <h1><%= @post.title %></h1>
   <p><%= @post.description %></p>
   <br>

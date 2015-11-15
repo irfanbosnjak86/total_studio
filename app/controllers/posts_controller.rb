@@ -11,11 +11,12 @@ class PostsController < ApplicationController
 
 	def new
 		@post = Post.new
+		@post.posts_images.build
 	end
 
 	def create
 		@post = Post.new(post_params)
-
+		@post.posts_images.build 
 		if @post.save 
 			redirect_to @post, notice: "Uspesno kreiran post!"
 		else
@@ -42,7 +43,7 @@ class PostsController < ApplicationController
 	private
 
 	def post_params
-		params.require(:post).permit(:title, :description, :image)
+		params.require(:post).permit(:title, :description, posts_images_attributes: [:caption, :post_id, :image, :_destroy] )
 	end
 
 	def find_posts
