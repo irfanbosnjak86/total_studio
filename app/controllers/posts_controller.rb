@@ -11,7 +11,7 @@ class PostsController < ApplicationController
 
 	def new
 		@post = Post.new
-		@post.posts_images.build
+		1.times { @post.posts_images.build }
 	end
 
 	def create

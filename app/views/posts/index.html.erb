@@ -6,7 +6,7 @@
 					<div class="post">
 						<div>						
 							<%= link_to post do %>
-								<%= image_tag post.image.url(:medium) %>
+								<%= image_tag post.posts_images((:image).(:url).(:medium)) %>
 							<% end %>
 						</div>
 

@@ -20,12 +20,8 @@ ActiveRecord::Schema.define(version: 20151114231808) do
     t.string   "title"
     t.text     "description"
     t.integer  "user_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "posts_images", force: :cascade do |t|
@@ -39,4 +35,7 @@ ActiveRecord::Schema.define(version: 20151114231808) do
     t.datetime "image_updated_at"
   end
 
+  add_index "posts_images", ["post_id"], name: "index_posts_images_on_post_id", using: :btree
+
+  add_foreign_key "posts_images", "posts"
 end

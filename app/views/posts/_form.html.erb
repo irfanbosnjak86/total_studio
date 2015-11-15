@@ -18,11 +18,10 @@
 		<br>
 	<div class="post-image">
 		<%= f.simple_fields_for :posts_images do |posts_image| %>
-
 			<%= render 'posts_image_fields', f: posts_image %>
 
 			<div class="links">
-				<%= link_to_add_association 'Dodaj Sliku', f, :posts_images, class: "form-button btn btn-default" %>
+				<%= link_to_add_association 'Dodaj Sliku', f, :posts_images, class: "form-button btn btn-primary" %>
 			</div>
 		<% end %> 
 	</div>

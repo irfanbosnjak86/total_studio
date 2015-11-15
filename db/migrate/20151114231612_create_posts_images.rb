@@ -7,6 +7,5 @@ class CreatePostsImages < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-    add_foreign_key :posts_images, :post
   end
 end
