@@ -11,10 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151114231808) do
+ActiveRecord::Schema.define(version: 20151117193045) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "post_images", force: :cascade do |t|
+    t.string   "caption"
+    t.integer  "post_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
+
+  add_index "post_images", ["post_id"], name: "index_post_images_on_post_id", using: :btree
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
@@ -24,18 +37,5 @@ ActiveRecord::Schema.define(version: 20151114231808) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "posts_images", force: :cascade do |t|
-    t.string   "caption"
-    t.integer  "post_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-  end
-
-  add_index "posts_images", ["post_id"], name: "index_posts_images_on_post_id", using: :btree
-
-  add_foreign_key "posts_images", "posts"
+  add_foreign_key "post_images", "posts"
 end

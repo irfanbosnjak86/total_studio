@@ -18,6 +18,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+gem 'jquery-turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 #Bootstrap-sass 
@@ -25,11 +26,11 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
 #simple_form 
 gem 'simple_form', '~> 3.2'
 #Paperclip gem for images.
-gem 'paperclip', '~> 4.3', '>= 4.3.1'
+#gem 'paperclip', '~> 4.3', '>= 4.3.1'
 #Setting images to dropbox
 gem 'paperclip-dropbox', '~> 1.3', '>= 1.3.2'
 #NEsted forms gem
-gem "cocoon"
+gem 'cocoon', '~> 1.2', '>= 1.2.6'
 
 
 

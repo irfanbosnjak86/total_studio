@@ -4,9 +4,13 @@
 			<% group.each do |post| %>
 				<div class="col-md-3">
 					<div class="post">
-						<div>						
+						<div>	
+						<% if post.post_images.present? %>					
 							<%= link_to post do %>
-								<%= image_tag post.posts_images((:image).(:url).(:medium)) %>
+								<%= image_tag post.post_images.first.photo.url(:medium) %>
+							<% end %>
+							<% else %> 
+								<%= link_to post.title, post %>
 							<% end %>
 						</div>
 

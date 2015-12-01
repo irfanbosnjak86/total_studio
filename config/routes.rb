@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :posts
+  resources :posts 
 
-  
   root 'pages#index'
 
   get 'o_nama' => 'pages#about'

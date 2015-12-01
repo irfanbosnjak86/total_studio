@@ -1,0 +1,14 @@
+<div class="form-inline clearfix">
+<% if f.object.new_record? %>
+    <div class="nested-fields">
+      <%= f.file_field :photo, as: :file %>
+      <%= link_to_remove_association "Obrisi Sliku", f, class: "form-button btn btn-default" %>
+    </div>
+  <% else %>
+    <div class="nested-fields">
+      <%= image_tag f.object.photo.url('medium') %> 
+      <%= link_to_remove_association "Obrisi Sliku", f, class: "form-button btn btn-default" %> 
+      </div>
+  <% end %>
+
+</div>
