@@ -2,7 +2,8 @@
   <% @post.post_images.each do |images| %>
     <%= image_tag images.photo.url(:medium) %>
   <% end %>
-
+  
+  <h1><%= @post.category_name %></h1>
   <h1><%= @post.title %></h1>
   <p><%= @post.description %></p>
   <br>

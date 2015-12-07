@@ -11,24 +11,28 @@
 	<% end %>
 
 	<div class="panel-body">
-
+		<div class="category">
+			<%= f.collection_radio_buttons :category_name,  [["Vencanje"] ,['Foto Model'], ['Usluge']], :first, :last, { item_wrapper_tag: false} do |b| %>
+		  	 <li><%= b.label { b.radio_button + b.text } %>
+		  <% end %>
+		</div>
 		<%= f.input :title, input_html: { class: 'form-control' } %>
 		<br>
 		<%= f.input :description, input_html: { class: 'form-control' } %>
 		<br>
 		
-	<h3>Posts_Images</h3>
+		<h3>Posts_Images</h3>
 
-	<div class="images">
-				<%= f.simple_fields_for :post_images do |slika| %>
-				
-						<%= render 'post_image_fields', f: slika %>
+		<div class="images">
+					<%= f.simple_fields_for :post_images do |slika| %>
+					
+							<%= render 'post_image_fields', f: slika %>
 
-						<div class="links">
-							<%= link_to_add_association 'Dodaj Sliku', f, :post_images, class: "btn btn-default add-button" %>
-						</div>
-				<% end %>
-	</div>
+							<div class="links">
+								<%= link_to_add_association 'Dodaj Sliku', f, :post_images, class: "btn btn-default add-button" %>
+							</div>
+					<% end %>
+		</div>
 		<br>
 
 		<%= f.button :submit, class: "btn btn-primary" %> 
