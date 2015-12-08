@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
 #simple_form 
 gem 'simple_form', '~> 3.2'
+#Pagination Gem Kaminari
+gem 'kaminari'
 #Paperclip gem for images.
 #gem 'paperclip', '~> 4.3', '>= 4.3.1'
 #Setting images to dropbox

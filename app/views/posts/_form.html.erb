@@ -7,7 +7,7 @@
 					<li><%= msg %></li>
 				<% end %>
 			</ul>
-		</div>
+		</div><!-- end errors -->
 	<% end %>
 
 	<div class="panel-body">
@@ -15,7 +15,7 @@
 			<%= f.collection_radio_buttons :category_name,  [["Vencanje"] ,['Foto Model'], ['Usluge']], :first, :last, { item_wrapper_tag: false} do |b| %>
 		  	 <li><%= b.label { b.radio_button + b.text } %>
 		  <% end %>
-		</div>
+		</div><!-- end category -->
 		<%= f.input :title, input_html: { class: 'form-control' } %>
 		<br>
 		<%= f.input :description, input_html: { class: 'form-control' } %>
@@ -30,12 +30,12 @@
 
 							<div class="links">
 								<%= link_to_add_association 'Dodaj Sliku', f, :post_images, class: "btn btn-default add-button" %>
-							</div>
+							</div><!-- end links -->
 					<% end %>
-		</div>
+		</div><!-- end images -->
 		<br>
 
 		<%= f.button :submit, class: "btn btn-primary" %> 
 
-	</div>
+	</div><!-- end panel-body -->
 <% end %>
