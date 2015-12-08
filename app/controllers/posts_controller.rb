@@ -3,7 +3,11 @@ class PostsController < ApplicationController
 	layout "blog"
 
 	def index
-		@posts = Post.all.order("created_at DESC").page(params[:page]).per(8)
+		if params[:category_name]
+			@posts = Post.where(:category_name => params[:category_name]).order("created_at DESC").page(params[:page]).per(8)
+		else
+			@posts = Post.all.order("created_at DESC").page(params[:page]).per(8)
+		end
 	end
 
 	def show
