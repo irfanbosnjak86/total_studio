@@ -10,7 +10,6 @@ capybara-*.html
 /spec/tmp
 /public/assets
 /config/database.yml
-/config/dropbox.yml
 /test
 **.orig
 rerun.txt
