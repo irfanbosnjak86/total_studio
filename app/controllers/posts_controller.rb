@@ -16,6 +16,7 @@ class PostsController < ApplicationController
 	def new
 		@post = Post.new
 		@post.post_images.build
+		@post.videos.build
 	end
 
 	def create
@@ -46,7 +47,7 @@ class PostsController < ApplicationController
 	private
 
 	def post_params
-		params.require(:post).permit(:title, :description, :category_name, post_images_attributes: [ :caption, :id, :photo, :_destroy ])
+		params.require(:post).permit(:title, :description, :category_name, post_images_attributes: [ :caption, :id, :photo, :_destroy ], videos_attributes: [ :id, :title, :url, :description, :_destroy ])
 	end
 
 	def find_posts
