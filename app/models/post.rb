@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+  belongs_to :admin
 	has_many :post_images, :dependent => :destroy
   has_many :videos, :dependent => :destroy
 

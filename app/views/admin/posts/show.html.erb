@@ -12,7 +12,9 @@
   <p><%= @post.description %></p>
   <br>
 
-  <%= link_to "Back", posts_path, class: "btn btn-default" %>
-  <%= link_to "Edit", edit_post_path, class: "btn btn-default" %>
-  <%= link_to "Obrisi", post_path, method: :delete, data: {confirm: "Jeste li sigurni?" }, class: "btn btn-default" %>
+  <%= link_to "Back", blog_path, class: "btn btn-default" %>
+  <% if admin_signed_in? %>
+    <%= link_to "Edit", edit_admin_post_path, class: "btn btn-default" %>
+    <%= link_to "Obrisi", admin_post_path, method: :delete, data: {confirm: "Jeste li sigurni?" }, class: "btn btn-default" %>
+    <% end %>
 </div><!-- end container -->

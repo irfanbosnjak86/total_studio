@@ -53,7 +53,9 @@
             <a href="#">Kontakt</a>
           </li>
           <li>
+          <% if admin_signed_in? %>
             <%= link_to "Novi Post", new_post_path %>
+          <% end %>
           </li>
         </ul><!-- end navbar-nav -->
       </div><!-- navbar-inverse -->

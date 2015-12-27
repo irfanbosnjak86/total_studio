@@ -1,16 +1,17 @@
 class Admin::PostsController < ApplicationController
   before_action :find_posts, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin!, except: [:index, :show]
   layout "blog"
 
 
   def new
-    @post = Post.new
+    @post = current_admin.posts.build
     @post.post_images.build
     @post.videos.build
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_admin.posts.build(post_params)
     if @post.save 
       redirect_to ([ :admin, @post ]), notice: "Uspesno kreiran post!"
     else
