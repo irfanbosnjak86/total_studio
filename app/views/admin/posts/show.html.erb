@@ -1,0 +1,18 @@
+<div class="container">
+  <% @post.post_images.each do |images| %>
+    <%= image_tag images.photo.url(:medium) %>
+  <% end %>
+  <% @post.videos.each do |video| %>
+    <div class="embed-container">
+      <%= embed(video.url) %> 
+    </div> 
+  <% end %>
+  <h1><%= @post.category_name %></h1>
+  <h1><%= @post.title %></h1>
+  <p><%= @post.description %></p>
+  <br>
+
+  <%= link_to "Back", posts_path, class: "btn btn-default" %>
+  <%= link_to "Edit", edit_post_path, class: "btn btn-default" %>
+  <%= link_to "Obrisi", post_path, method: :delete, data: {confirm: "Jeste li sigurni?" }, class: "btn btn-default" %>
+</div><!-- end container -->

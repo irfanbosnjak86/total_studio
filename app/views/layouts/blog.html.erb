@@ -28,21 +28,21 @@
             <%= link_to "Home", root_path %>  
           </li>
           <li class="dropdown">
-            <%= link_to posts_path(@posts), { class: 'dropdown-toggle disabled', 'data-toggle' => 'dropdown' } do %>
+            <%= link_to blog_path(@posts), { class: 'dropdown-toggle disabled', 'data-toggle' => 'dropdown' } do %>
             Blog
              <span class="glyphicon glyphicon-chevron-down">
             <% end %>
               <ul class="dropdown-menu">
                   <li>
-                    <%= link_to "Venacanja", posts_path(:category_name => "Vencanje") %>
+                    <%= link_to "Venacanja", blog_path(:category_name => "Vencanje") %>
                   </li>
                   
                   <li>
-                    <%= link_to "Foto Model", posts_path(:category_name => "Foto Model") %>
+                    <%= link_to "Foto Model", blog_path(:category_name => "Foto Model") %>
                   </li>
                   
                   <li>
-                    <%= link_to "Usluge", posts_path(:category_name => "Usluge") %>
+                    <%= link_to "Usluge", blog_path(:category_name => "Usluge") %>
                   </li>
               </ul>
           </li>
