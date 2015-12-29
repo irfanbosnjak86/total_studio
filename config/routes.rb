@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   
   devise_for :admins
+  devise_scope :admin do
+    get "/admin" => "devise/sessions#new"
+  end
+
   namespace :admin do
     resources :posts
   end 
@@ -10,6 +14,7 @@ Rails.application.routes.draw do
 
   get 'o_nama' => 'pages#about'
   get 'blog' => 'posts#index'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

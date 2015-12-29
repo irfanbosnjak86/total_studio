@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -50,7 +51,7 @@ body {
       		vertical-align: top;
       		
       		li {
-      			padding-left: 100px;
+      			margin-left: 100px;
       		}
 
       		a {
@@ -73,11 +74,12 @@ body {
         .navbar-nav {
           display: inline-block;
           float: none;
+          margin: 0;
           vertical-align: top;
+        li {
+            margin-left: 100px;
+          }  
           
-          li {
-            padding-left: 100px;
-          }
         }
       }  
   }
@@ -110,6 +112,9 @@ body {
 /* --------------------------------------
    Index
    -------------------------------------- */
+.dropdown-menu li a {
+    margin-left: -100px;
+}
 .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0; /* remove the gap so it doesn't close */
@@ -201,4 +206,13 @@ a#postTitle {
 		background: transparent;
 		display: block;
 	}
+}
+
+@media (min-width: 768px){
+    .navbar-nav{
+        float:none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+    }
 }

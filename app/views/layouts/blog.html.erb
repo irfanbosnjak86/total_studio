@@ -30,7 +30,7 @@
           <li class="dropdown">
             <%= link_to blog_path(@posts), { class: 'dropdown-toggle disabled', 'data-toggle' => 'dropdown' } do %>
             Blog
-             <span class="glyphicon glyphicon-chevron-down">
+             <span class="caret"></span>
             <% end %>
               <ul class="dropdown-menu">
                   <li>
@@ -52,11 +52,23 @@
           <li>
             <a href="#">Kontakt</a>
           </li>
-          <li>
           <% if admin_signed_in? %>
-            <%= link_to "Novi Post", new_post_path %>
+            <li class="dropdown">
+                <%= link_to "#", { class: 'dropdown-toggle disabled', 'data-toggle' => 'dropdown' } do %>
+                Admin 
+                <span class="glyphicon glyphicon-user"></span>
+                <% end %>
+
+              <ul class="dropdown-menu">
+                  <li>
+                    <%= link_to "Novi Post", new_post_path %>
+                  </li>
+                  <li>
+                    <%= link_to "Sign Out", destroy_admin_session_path, method: :delete %>
+                  </li>
+              </ul>
+            </li>
           <% end %>
-          </li>
         </ul><!-- end navbar-nav -->
       </div><!-- navbar-inverse -->
   </div><!-- end navbar-container -->
