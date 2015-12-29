@@ -34,15 +34,22 @@
             <% end %>
               <ul class="dropdown-menu">
                   <li>
-                    <%= link_to "Venacanja", blog_path(:category_name => "Vencanje") %>
+                    <%= link_to blog_path(:category_name => "Vencanje") do %>
+                      <span class="glyphicon glyphicon-heart-empty"></span> Vencanja
+                    <% end %>
                   </li>
                   
                   <li>
-                    <%= link_to "Foto Model", blog_path(:category_name => "Foto Model") %>
+                    <%= link_to blog_path(:category_name => "Foto Model") do %>
+                      <span class="glyphicon glyphicon-camera"></span> Foto Model
+                    <% end %>
                   </li>
                   
                   <li>
-                    <%= link_to "Usluge", blog_path(:category_name => "Usluge") %>
+                    <%= link_to blog_path(:category_name => "Usluge") do %>
+                      <span class="glyphicon glyphicon-cog"></span> Usluge
+                    <% end %>
+
                   </li>
               </ul>
           </li>
@@ -55,16 +62,19 @@
           <% if admin_signed_in? %>
             <li class="dropdown">
                 <%= link_to "#", { class: 'dropdown-toggle disabled', 'data-toggle' => 'dropdown' } do %>
-                Admin 
-                <span class="glyphicon glyphicon-user"></span>
+                  <span class="glyphicon glyphicon-user"></span> Admin 
                 <% end %>
 
               <ul class="dropdown-menu">
                   <li>
-                    <%= link_to "Novi Post", new_post_path %>
+                    <%= link_to new_post_path do %>
+                      <span class="glyphicon glyphicon-film"></span> Novi Post
+                    <% end %>
                   </li>
                   <li>
-                    <%= link_to "Sign Out", destroy_admin_session_path, method: :delete %>
+                    <%= link_to destroy_admin_session_path, method: :delete do %>
+                      <span class="glyphicon glyphicon-off"></span> Sing Out
+                    <% end %>
                   </li>
               </ul>
             </li>
