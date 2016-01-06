@@ -40,7 +40,7 @@ class SlidersController < ApplicationController
   private
 
   def slider_params
-    params.require(:slider).permit( :slider_id, :slider_name )
+    params.require(:slider).permit( :slider_id, :slider_name, :image )
   end 
 
   def find_slider
