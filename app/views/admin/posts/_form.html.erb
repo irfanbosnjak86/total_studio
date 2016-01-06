@@ -1,58 +1,58 @@
 <%= simple_form_for @post, html: { multipart: true } do |f| %>
-	<% if @post.errors.any? %>
-		<div id="errors">
-			<p><%= @post.errors.count %> Prevented this post from saving </p>
-			<ul>
-				<% @post.errors.full_messages.each do |msg| %>
-					<li><%= msg %></li>
-				<% end %>
-			</ul>
-		</div><!-- end errors -->
-	<% end %>
+  <% if @post.errors.any? %>
+    <div id="errors">
+      <p><%= @post.errors.count %> Onemogucilo kreiranje slidera </p>
+      <ul>
+        <% @post.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div><!-- end errors -->
+  <% end %>
 
-	<div class="panel-body">
-		<div class="category">
-			<%= f.collection_radio_buttons :category_name,  [["Vencanje"] ,['Foto Model'], ['Usluge']], :first, :last, { item_wrapper_tag: false} do |b| %>
-		  	 <li><%= b.label { b.radio_button + b.text } %></li>
-		  <% end %>
-		</div><!-- end category -->
+  <div class="panel-body">
+    <div class="category">
+      <%= f.collection_radio_buttons :category_name,  [["Vencanje"] ,['Foto Model'], ['Usluge']], :first, :last, { item_wrapper_tag: false} do |b| %>
+         <li><%= b.label { b.radio_button + b.text } %></li>
+      <% end %>
+    </div><!-- end category -->
 
-		<%= f.input :title, input_html: { class: 'form-control' } %>
-		<br>
-		<%= f.input :description, input_html: { class: 'form-control' } %>
-		<br>
-		<div class="row">
-			<h3>Posts Images</h3>
+    <%= f.input :title, input_html: { class: 'form-control' } %>
+    <br>
+    <%= f.input :description, input_html: { class: 'form-control' } %>
+    <br>
+    <div class="row">
+      <h3>Posts Images</h3>
 
-			<div id="post_images">
-						<%= f.simple_fields_for :post_images do |slika| %>
-						
-								<%= render 'post_image_fields', f: slika %>
+      <div id="post_images">
+            <%= f.simple_fields_for :post_images do |slika| %>
+            
+                <%= render 'post_image_fields', f: slika %>
 
-								<div class="links">
-									<%= link_to_add_association 'Dodaj Sliku', f, :post_images, class: "btn btn-default add-button" %>
-								</div><!-- end links -->
-						<% end %>
-			</div><!-- end images -->
-			<br>
+                <div class="links">
+                  <%= link_to_add_association 'Dodaj Sliku', f, :post_images, class: "btn btn-default add-button" %>
+                </div><!-- end links -->
+            <% end %>
+      </div><!-- end images -->
+      <br>
 
-			<h3>Posts Videos</h3>
+      <h3>Posts Videos</h3>
 
-			<div id="videos">
-						<%= f.simple_fields_for :videos do |snimak| %>
-						
-								<%= render 'video_fields', f: snimak %>
+      <div id="videos">
+            <%= f.simple_fields_for :videos do |snimak| %>
+            
+                <%= render 'video_fields', f: snimak %>
 
-								<div class="links">
-									<%= link_to_add_association 'Dodaj Video', f, :videos, class: "btn btn-default add-button" %>
-								</div><!-- end links -->
-						<% end %>
-			</div><!-- end videos -->
-			
-			<br>
+                <div class="links">
+                  <%= link_to_add_association 'Dodaj Video', f, :videos, class: "btn btn-default add-button" %>
+                </div><!-- end links -->
+            <% end %>
+      </div><!-- end videos -->
+      
+      <br>
 
-			<%= f.button :submit, class: "btn btn-primary" %> 
-		</div>
-		</div><!-- end row -->
-	</div><!-- end panel-body -->
+      <%= f.button :submit, class: "btn btn-primary" %> 
+    </div>
+    </div><!-- end row -->
+  </div><!-- end panel-body -->
 <% end %>
