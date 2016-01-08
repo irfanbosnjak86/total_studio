@@ -10,10 +10,12 @@ class SlidersController < ApplicationController
 
   def new
     @slider = Slider.new
+    6.times { @slider.slider_images.build }
   end
 
   def create 
     @slider = Slider.new(slider_params)
+
     if @slider.save
       redirect_to @slider, notice: "Uspesno kreiran Slider!"
     else
@@ -30,6 +32,7 @@ class SlidersController < ApplicationController
   end
 
   def edit
+    6.times { @slider.slider_images.build }
   end
 
   def destroy
@@ -40,7 +43,7 @@ class SlidersController < ApplicationController
   private
 
   def slider_params
-    params.require(:slider).permit( :slider_id, :slider_name, :image )
+    params.require(:slider).permit( :slider_id, :slider_name, slider_images_attributes: [ :id, :image, :_destroy ] )
   end 
 
   def find_slider

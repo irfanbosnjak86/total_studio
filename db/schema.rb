@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160106231610) do
+ActiveRecord::Schema.define(version: 20160108013919) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,15 +57,24 @@ ActiveRecord::Schema.define(version: 20160106231610) do
     t.integer  "admin_id"
   end
 
-  create_table "sliders", force: :cascade do |t|
+  create_table "slider_images", force: :cascade do |t|
+    t.integer  "simage_id"
     t.integer  "slider_id"
-    t.string   "slider_name"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+  end
+
+  add_index "slider_images", ["slider_id"], name: "index_slider_images_on_slider_id", using: :btree
+
+  create_table "sliders", force: :cascade do |t|
+    t.integer  "slider_id"
+    t.string   "slider_name"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "videos", force: :cascade do |t|
@@ -79,5 +88,6 @@ ActiveRecord::Schema.define(version: 20160106231610) do
   add_index "videos", ["post_id"], name: "index_videos_on_post_id", using: :btree
 
   add_foreign_key "post_images", "posts"
+  add_foreign_key "slider_images", "sliders"
   add_foreign_key "videos", "posts"
 end

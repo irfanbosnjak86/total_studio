@@ -11,7 +11,13 @@
   <% end %>
   <div class="panel-body">
     <%= f.input :slider_name, input_html: { class: 'form-control' } %>
-    <%= f.file_field :image %>
+
+  <div class="slider-image">
+    <%= f.simple_fields_for :slider_images do |slider| %>
+      <%= slider.file_field :image, f: slider %>
+    <% end %>
+  </div>
+
     <%= f.button :submit, class: "btn btn-primary" %>
   </div>
 <% end %>
