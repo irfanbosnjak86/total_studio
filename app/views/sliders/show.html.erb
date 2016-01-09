@@ -1,7 +1,7 @@
 <div class="container">
   <h1><%= @slider.slider_name %></h1>
   <% @slider.slider_images.each do |f| %>
-    <%= image_tag f.image.url(:medium) %>
+    <%= image_tag f.image.url(:thumb) %>
   <% end %>
   <%= link_to "Back", blog_path, class: "btn btn-default" %>
   <%= link_to "Edit", edit_slider_path, class: "btn btn-default" %>
