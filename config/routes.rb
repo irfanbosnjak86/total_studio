@@ -7,12 +7,13 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :posts
+    resources :sliders
   end 
 
   resources :posts, module: 'admin'
-  resources :sliders 
+  resources :sliders, module: 'admin' 
 
-  root 'pages#index'
+  root 'sliders#index'
 
   get 'o_nama' => 'pages#about'
   get 'blog' => 'posts#index'
