@@ -14,7 +14,12 @@
 
   <div class="slider-image">
     <%= f.simple_fields_for :slider_images do |slider| %>
-      <%= slider.file_field :image, f: slider %>
+      <% if f.object.new_record? %>
+        <%= slider.file_field :image, f: slider %>
+      <% else %>
+        <%= image_tag slider.object.image.url('thumb') %>
+        <%= slider.file_field :image, f: slider %>
+      <% end %>
     <% end %>
   </div>
 

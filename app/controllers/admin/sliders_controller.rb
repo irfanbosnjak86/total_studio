@@ -36,7 +36,10 @@ layout "blog", except: [:index]
   end
 
   def edit
-    6.times { @slider.slider_images.build }
+    n = @slider.slider_images.count
+    if n < 6 
+      (6-n).times { @slider.slider_images.build }
+    end  
   end
 
   def destroy
@@ -47,7 +50,7 @@ layout "blog", except: [:index]
   private
 
   def slider_params
-    params.require(:slider).permit( :admin_id, :slider_id, :slider_name, slider_images_attributes: [ :id, :image, :_destroy ] )
+    params.require(:slider).permit( :admin_id, :slider_id, :slider_name, slider_images_attributes: [ :id, :simage_id, :image, :_destroy ] )
   end 
 
   def find_slider
