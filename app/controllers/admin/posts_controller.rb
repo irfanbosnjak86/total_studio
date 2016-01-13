@@ -32,7 +32,7 @@ class Admin::PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to posts_path, notice: "Uspesno obrisan post!"
+    redirect_to '/blog', notice: "Uspesno obrisan post!"
   end
 
   private

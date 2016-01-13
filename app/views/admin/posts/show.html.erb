@@ -1,11 +1,16 @@
 <div class="container">
+
   <% @post.post_images.each do |images| %>
-    <%= image_tag images.photo.url(:medium) %>
+    <% unless images.photo_file_name.blank? %>
+      <%= image_tag images.photo.url(:medium) %>
+    <% end %>
   <% end %>
   <% @post.videos.each do |video| %>
-    <div class="embed-container">
-      <%= embed(video.url) %> 
-    </div> 
+    <% unless video.url.blank? %>
+      <div class="embed-container">
+        <%= embed(video.url) %> 
+      </div> 
+    <% end %>
   <% end %>
   <h1><%= @post.category_name %></h1>
   <h1><%= @post.title %></h1>

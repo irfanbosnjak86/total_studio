@@ -17,7 +17,6 @@ Rails.application.routes.draw do
 
   get 'o_nama' => 'pages#about'
   get 'blog' => 'posts#index'
-  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

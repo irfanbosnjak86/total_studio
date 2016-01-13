@@ -37,9 +37,12 @@
 	</div><!-- end navbar-container -->
 </div><!-- end navbar mojNav -->
 
-	<% flash.each do |name, msg| %>
-		<%= content_tag(:div, msg, class: "alert") %>
-	<% end %><!-- end flash msg -->
+<% flash.each do |type, message| %>
+  <div class="alert <%= bootstrap_class_for(type) %> fade in">
+    <button class="close" data-dismiss="alert">×</button>
+    <%= message %>
+  </div>
+<% end %><!-- end flash msg -->
 
 	<%= yield %>
 
