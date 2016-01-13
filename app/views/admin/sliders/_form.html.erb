@@ -17,7 +17,9 @@
       <% if f.object.new_record? %>
         <%= slider.file_field :image, f: slider %>
       <% else %>
+      <% unless slider.object.image.blank? %>
         <%= image_tag slider.object.image.url('thumb') %>
+      <% end %>
         <%= slider.file_field :image, f: slider %>
       <% end %>
     <% end %>
