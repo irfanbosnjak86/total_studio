@@ -1,25 +1,25 @@
 <div class="container">
 
-  <% @post.post_images.each do |images| %>
-    <% unless images.photo_file_name.blank? %>
-      <%= image_tag images.photo.url(:medium) %>
+  <div class="page-wrapper">
+    <% @post.post_images.each do |images| %>
+      <div class="image-wrapper">
+        <%= image_tag images.photo.url(:medium) %>
+      </div>
     <% end %>
-  <% end %>
-  <% @post.videos.each do |video| %>
-    <% unless video.url.blank? %>
+    <% @post.videos.each do |video| %>
       <div class="embed-container">
         <%= embed(video.url) %> 
       </div> 
     <% end %>
-  <% end %>
-  <h1><%= @post.category_name %></h1>
-  <h1><%= @post.title %></h1>
-  <p><%= @post.description %></p>
-  <br>
+    <h1><%= @post.category_name %></h1>
+    <h1><%= @post.title %></h1>
+    <p><%= @post.description %></p>
+    <br>
 
   <%= link_to "Back", blog_path, class: "btn btn-default" %>
   <% if admin_signed_in? %>
     <%= link_to "Edit", edit_admin_post_path, class: "btn btn-default" %>
     <%= link_to "Obrisi", admin_post_path, method: :delete, data: {confirm: "Jeste li sigurni?" }, class: "btn btn-default" %>
   <% end %>
+  </div>
 </div><!-- end container -->
