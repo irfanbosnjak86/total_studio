@@ -5,7 +5,7 @@ class Admin::PostsController < ApplicationController
 
 
   def new
-    @post = current_admin.posts.build
+    @post =  current_admin.posts.build 
     @post.post_images.build
     @post.videos.build
   end
