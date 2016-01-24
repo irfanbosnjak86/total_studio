@@ -8,8 +8,8 @@
 </head>
 <body>
 
-
 <div class="container">
+
 <div class="navbar navbar-inverse navbar-fixed-top" id="mojNavBlog" role="navigation">
   
       <div class="navbar-header">
@@ -24,7 +24,7 @@
       </div><!-- navbar-header -->    
       
       <div class="navbar-collapse collapse" id="navBlog">
-      
+      <div class="container">
         <ul class="nav navbar-nav">
           <li>
             <%= link_to "Home", root_path %>  
@@ -55,19 +55,24 @@
                   </li>
               </ul>
           </li>
-          <li>
-            <%= link_to "O nama", o_nama_path %>
+          <li id="logo">
+              <%= image_tag('Logocrni.png') %>
           </li>
           <li>
-            <a href="#">Kontakt</a>
+            <%= link_to "O nama", o_nama_path, class: "desno" %>
           </li>
-          <% if admin_signed_in? %>
-            <li class="dropdown">
+          <li>
+            <a href="#" class="desno">Kontakt</a>
+          </li>
+          
+        </ul><!-- end navbar-nav -->
+      <% if admin_signed_in? %>
+            <div class="dropdown">
                 <%= link_to "#", { class: 'dropdown-toggle disabled', 'data-toggle' => 'dropdown' } do %>
                   <span class="glyphicon glyphicon-user"></span> Admin 
                 <% end %>
 
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu" id="admin">
                   <li>
                     <%= link_to edit_admin_slider_path(@slider = Slider.last) do %>
                       <span class="glyphicon glyphicon-film"></span> Slider Edit
@@ -84,16 +89,16 @@
                     <% end %>
                   </li>
               </ul>
-            </li>
+            </div>
           <% end %>
-        </ul><!-- end navbar-nav -->
-      
       </div><!-- navbar-inverse -->
   </div><!-- end navbar-container -->
+  </div>
 </div><!-- end navbar mojNav -->
 
 
-<div class="container">
+
+
 <% flash.each do |type, message| %>
   <div class="alert <%= bootstrap_class_for(type) %> fade in">
     <button class="close" data-dismiss="alert">×</button>

@@ -17,15 +17,19 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body {
-	background: image-url('pozadina.png');
+@font-face {
+      font-family: "Humanist521BT";
+      src: url('/assets/humanst521-bt-bold-webfont.woff') format('woff');
+}
 
+body {
+  background-color: #ededed;
+  font-family: Humanist521BT;
 }
 
 /* --------------------------------------
    Global
    -------------------------------------- */
-
 
 .alert {
   margin-top: 50px;
@@ -37,59 +41,81 @@ body {
   #mojNav {
 
 	background: transparent;
-	text-shadow: black 0.01em 0.01em 0.2em;
+	
 	-webkit-font-smoothing: antialiased;
-   	text-rendering: optimizelegibility;
-   	font-size: 18px;
+  text-rendering: optimizelegibility;
+ 	font-size: 18px;
+  text-align: center;
 	border: none;
-
+  position: relative;
   	#navNav {
-  	
-      	text-align: center;
         .navbar-nav {
           display: inline-block;
           float: none;
           margin: 0;
           vertical-align: top;
           width: 100%;
-          margin-left: 32%;
+          background-color: #ededed;
 
           li {
-            width: 8em;
-            display:inline;
-            text-align: center;
+            
+            margin-left: 0;
+            width: 20%;
           }  
           
 
       		a {
             display:inline-block;
-      			color: white;
             text-align: center;
+            margin-top: 17%;
+            /* Text style for "ABOUT" */
+            color: #323232;
+            font-family: Humanist521BT;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 17px;
       		}
-
-      		a:hover {
-      	    	color: #333;
-      		}
-      	}
+          .desno {
+            text-align: right;
+               
+            }
+        }
     }	
   }
-
+  
   #mojNavBlog {
     font-size: 18px;
-
+    background-color: #ededed;
+    border: none;
+    position: relative;
     #navBlog {
-    
         text-align: center;
         .navbar-nav {
           display: inline-block;
           float: none;
           margin: 0;
           vertical-align: top;
-        li {
-            width: 10em;
-            text-align: center;
-          }  
+          width: 100%;
           
+          li {
+              margin-left: 0;
+              height: 100%;
+              width: 20%;   
+            }
+
+          a {
+            margin-top: 17%;
+            text-align: left;
+            color: #323232;
+            font-family: Humanist521BT;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 17px;
+          } 
+           .desno {
+            text-align: right;
+               
+            }
         }
       }  
   }
@@ -97,6 +123,8 @@ body {
 #mojButton {
   margin-top: 0;
   }
+
+
 /* --------------------------------------
    Show
    -------------------------------------- */
@@ -142,6 +170,7 @@ input.form-control, textarea.form-control {
 }
 
 .panel-body {
+  margin-top: 40px;
   margin-bottom: 15px;
 }
 
@@ -158,111 +187,184 @@ input.form-control, textarea.form-control {
 /* --------------------------------------
    Index
    -------------------------------------- */
+  #indexBlog {
+    margin-top: 40px;
+    height: 1000px;
+  }
+  
+  #postred {
+    padding-left: 47px;
 
+  }
+  .page-header {
+    h1 {
+      /* Text style for "RECENT WORK" */
+      
+      color: #323232;
+      font-family: Humanist521BT;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 17px;
+      text-align: center;
+    }
+  }
   .dropdown-menu {
     float: none;
-    margin-left: 3em;
     vertical-align: top;
 
     a {
        text-align: left;
+       margin-top: 0;
       } 
-
+  }
+  .navbar-nav > li > .dropdown-menu {
+    
   }
   .dropdown:hover .dropdown-menu {
       display: block;
       margin-top: 0; /* remove the gap so it doesn't close */
    }
  
-  
-.hovereffect {
-  width: 100%;
-  height: 100%;
-  
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  cursor: default;
-  margin-top: 30px;
-}
 
-.hovereffect .overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-}
+  /* --------------------------------------
+   Tranzicija bela kocka
+   -------------------------------------- */
+  #box  { 
+          width:355px;
+          height:355px;
+          box-shadow:inset 1px 1px 40px 0 rgba(0,0,0,.45);
+          border-bottom:2px solid #fff;
+          border-right:2px solid #fff;
+          margin:5% auto 0 auto; 
+          border-radius:5px;
+          background-size:cover;
+          overflow:hidden;
+          img {
+            position: absolute;
+          }
+    }
 
-.hovereffect img {
-  display: block;
-  position: relative;
-  -webkit-transition: all 0.4s ease-in;
-  transition: all 0.4s ease-in;
-}
+  #overlay  { 
+              width:300px;
+              height:300px;
+              background:white;
+              text-align:center;
+              margin-top:40px;
+              margin-left: 26px;
+              opacity:0;
+              -webkit-transition: opacity .25s ease;
+              -moz-transition: opacity .25s ease;
+            }
+  .title {
+    h2 {
+      padding-top: 10%;
+    }
 
-.hovereffect:hover img {
-  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
-  filter: grayscale(1) blur(3px);
-  -webkit-filter: grayscale(1) blur(3px);
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-}
+    a {
+      font-family:Helvetica;
+               font-weight:900;
+               color:black;
+               font-size:45px;
+    }
+  }
+  #box:hover #overlay {
+                 opacity: .8;
+                }
 
-.hovereffect h2 {
-  text-transform: uppercase;
-  text-align: center;
-  position: relative;
-  font-size: 17px;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.6);
-}
+  /* --------------------------------------
+   Tranzicija sa blurom
+   -------------------------------------- */
+  .hovereffect {
+    width: 100%;
+    height: 100%;
+    
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    margin-top: 30px;
+    border-width: 2px; 
+    border-style: solid;
+  }
 
-.hovereffect p {
-  text-transform: uppercase;
-  text-align: center;
-  position: relative;
-  font-size: 17px;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.6);
-  margin: 50px 0 0 0;
-}
- 
+  .hovereffect .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    padding: 20px;
+  }
 
-.hovereffect a.info {
-  display: inline-block;
-  text-decoration: none;
-  padding: 7px 14px;
-  border: 1px solid #fff;
-  margin: 50px 0 0 0;
-  background-color: transparent;
-}
+  .hovereffect img {
+    display: block;
+    position: relative;
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+  }
 
-.hovereffect a.info:hover {
-  box-shadow: 0 0 5px #fff;
-}
+  .hovereffect:hover img {
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
+    filter: grayscale(1) blur(3px);
+    -webkit-filter: grayscale(1);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
 
-.hovereffect a.info, .hovereffect h2, .hovereffect p {
-  -webkit-transform: scale(0.7);
-  -ms-transform: scale(0.7);
-  transform: scale(0.7);
-  -webkit-transition: all 0.4s ease-in;
-  transition: all 0.4s ease-in;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  color: #fff;
-  text-transform: uppercase;
-}
+  .hovereffect h2 {
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+  }
 
-.hovereffect:hover a.info, .hovereffect:hover h2, .hovereffect:hover p {
-  opacity: 1;
-  filter: alpha(opacity=100);
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
+  .hovereffect p {
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    margin: 50px 0 0 0;
+  }
+   
+
+  .hovereffect a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    border: 1px solid #fff;
+    margin: 50px 0 0 0;
+    background-color: transparent;
+  }
+
+  .hovereffect a.info:hover {
+    box-shadow: 0 0 5px #fff;
+  }
+
+  .hovereffect a.info, .hovereffect h2, .hovereffect p {
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .hovereffect:hover a.info, .hovereffect:hover h2, .hovereffect:hover p {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
 
 
 /* --------------------------------------
@@ -290,7 +392,7 @@ input.form-control, textarea.form-control {
    Pages 
    -------------------------------------- */
 .container {
-	margin-top: 60px;
+  max-width: 1280px;
 }
 
 
@@ -309,41 +411,33 @@ a#postTitle {
    Carousel
    -------------------------------------- */
 
-#myCarousel {
-	margin-top: 0;
-}
+  #myCarousel {
+  	
+    width: 100%;
+    height:auto;
 
+    img {
+          width: 100%;
+          max-height: 500px;
+        }
+  }
 
+ /* 
 #myCarousel .item { 
 
-	background-size: 100%;
-	height: 100vh; /* 100% vertikalnog prostora */
-	}
+	background-size: 100%
+	height: 100vh; /* 100% vertikalnog prostora 
+	} */
 
-#slide1 {
-   background: image-url('slide1.jpg') top center no-repeat;
-}
-
-#slide2 {
-   background: image-url('slide2.jpg') top center no-repeat;
-}
-
-#slide3 {
-   background: image-url('slide3.jpg') top center no-repeat;
-} 
-
-.logo {
+#logo {
 	img {
-		width: 354px;
-		height: 248px;
-		 position: absolute;
-   top: 50%;
-   left: 50%;
-   width: 350x;
-   height: 240px;
-   margin-top: -180px; /* Half the height */
-   margin-left: -174px; /* Half the width */
+		width: 100%;
+		height: 100%;
+		position: relative;  
 	}
+}
+#admin {
+  margin-left: 44%;
 }
 
 @media (min-width: 768px){

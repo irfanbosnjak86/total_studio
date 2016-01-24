@@ -3,6 +3,7 @@ class SlidersController < ApplicationController
   
   def index
     @slider = Slider.last
+    @posts = Post.all.order("created_at DESC").page(params[:page]).per(6)
     if @slider.present? 
       render 'index'
     else

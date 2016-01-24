@@ -1,31 +1,46 @@
 <div class="carousel slide" id="myCarousel">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <% @slider.slider_images.each_with_index do |f,index| %>
+      <div class="item <%= "active" if index == 0 %>">
+        <%= image_tag f.image.url(:medium) %>
+      </div><!-- end item -->
+     <% end %>
+  </div><!-- end carousel-inner -->
 
-      <!-- Carousel Indicators -->
-
-      <ol class="carousel-indicators">
-        <% @slider.slider_images.each_with_index do |f,index| %>
-          <li  <%= 'class= "active"' if index == 0 %> data-slide-to = "<%= index %>" data-target="#myCarousel"> </li>
-        <% end %>
-      </ol>
-
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner">
-
-        <% @slider.slider_images.each_with_index do |f,index| %>
-         
-            <div class="item <%= "active" if index == 0 %>">
-              <%= image_tag f.image.url(:medium) %>
-            </div><!-- end item -->
-          
-        <% end %>
-
-      </div><!-- end carousel-inner -->
-
-      <!-- Controls strelice -->
-      <a class="left carousel-control" data-slide="prev" href="#myCarousel"><span class="icon-prev"></span></a>
-      <a class="right carousel-control" data-slide="next" href="#myCarousel"><span class="icon-next"></span></a>
-
-      <div class="logo">
-        <%= image_tag('Logobeli.png') %>
-      </div><!-- end logo-->
+  <!-- Controls strelice -->
+    <a class="left carousel-control" data-slide="prev" href="#myCarousel"><span class="icon-prev"></span></a>
+    <a class="right carousel-control" data-slide="next" href="#myCarousel"><span class="icon-next"></span></a>
 </div><!-- end myCarousel -->
+
+<div class="container" id="indexBlog">
+  <div class="page-header">
+    <h1>RECENT WORK</h1>
+  </div>
+  <div class="row">
+    <% @posts.in_groups_of(3, false).each do |group|  %>
+      <div class="row" id="postred">
+        <% group.each do |post| %>
+          <div class="col-md-4" id="post">
+                <% if post.post_images.present? %>  
+                <div id="box">        
+                  <%= link_to post do %>
+                    <%= image_tag post.post_images.first.photo.url(:index) %>
+                  <% end %>
+                  <% else %> 
+                    <%= link_to post.title, post %>
+                  <% end %>
+                <div id="overlay">
+                  <div class="title">
+                    <h2><%= post.description %></h2>
+                    <%= link_to post.title, post %>
+                  
+                    <p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
+                  </div>
+                </div>
+              </div>  
+          </div>      
+        <% end %>
+      </div>  
+    <% end %>
+</div>

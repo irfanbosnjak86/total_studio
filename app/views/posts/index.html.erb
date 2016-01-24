@@ -1,25 +1,29 @@
 <div class="container" id="indexBlog">
 	<div class="row">
 		<% @posts.in_groups_of(3, false).each do |group|  %>
-			<div class="row">
+			<div class="row" id="postred">
 				<% group.each do |post| %>
-					<div class="col-md-4">
-						<div class="hovereffect">
-							<div class="img-responsive">	
-							<% if post.post_images.present? %>					
-								<%= link_to post do %>
-									<%= image_tag post.post_images.first.photo.url(:index) %>
-								<% end %>
-								<% else %> 
-									<%= link_to post.title, post %>
-								<% end %>
-							</div>
-							<div class="overlay">
-								<h2><%= post.description %></h2>
-								<%= link_to post.title, post, class: "info" %>
+					<div class="col-md-4" id="post">
+						<div>
 								
-								<p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
+								<% if post.post_images.present? %>	
+								<div id="box">				
+									<%= link_to post do %>
+										<%= image_tag post.post_images.first.photo.url(:index) %>
+									<% end %>
+									<% else %> 
+										<%= link_to post.title, post %>
+									<% end %>
+								<div id="overlay">
+									<div class="title">
+										<h2><%= post.description %></h2>
+										<%= link_to post.title, post %>
+									
+										<p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
+									</div>
+								</div>
 							</div>
+							
 						</div>
 					</div>			
 				<% end %>
