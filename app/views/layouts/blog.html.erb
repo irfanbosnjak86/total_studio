@@ -27,31 +27,28 @@
       <div class="container">
         <ul class="nav navbar-nav">
           <li>
-            <%= link_to "Home", root_path %>  
+            <%= link_to "HOME", root_path %>  
           </li>
           <li class="dropdown">
             <%= link_to blog_path(@posts), { class: 'dropdown-toggle disabled', 'data-toggle' => 'dropdown' } do %>
-            Blog
+            BLOG
              <span class="caret"></span>
             <% end %>
               <ul class="dropdown-menu">
                   <li>
-                    <%= link_to blog_path(:category_name => "Vencanje") do %>
-                      <span class="glyphicon glyphicon-heart-empty"></span> Vencanja
-                    <% end %>
+                    <%= link_to "WEDDING", blog_path(:category_name => "wedding")%>
                   </li>
-                  
                   <li>
-                    <%= link_to blog_path(:category_name => "Foto Model") do %>
-                      <span class="glyphicon glyphicon-camera"></span> Foto Model
-                    <% end %>
+                    <%= link_to "WORK", blog_path(:category_name => "work") %>
                   </li>
-                  
                   <li>
-                    <%= link_to blog_path(:category_name => "Usluge") do %>
-                      <span class="glyphicon glyphicon-cog"></span> Usluge
-                    <% end %>
-
+                    <%= link_to "VIDEO", blog_path(:category_name => "video") %>
+                  </li>
+                  <li>
+                    <%= link_to "DESIGN", blog_path(:category_name => "design") %>
+                  </li>
+                  <li>
+                    <%= link_to "SERVICES", blog_path(:category_name => "services") %>
                   </li>
               </ul>
           </li>
@@ -59,10 +56,10 @@
               <%= image_tag('Logocrni.png') %>
           </li>
           <li>
-            <%= link_to "O nama", o_nama_path, class: "desno" %>
+            <%= link_to "ABOUT", o_nama_path, class: "desno" %>
           </li>
           <li>
-            <a href="#" class="desno">Kontakt</a>
+            <a href="#" class="desno">CONTACT</a>
           </li>
           
         </ul><!-- end navbar-nav -->
@@ -114,17 +111,17 @@
     <center>
       <ul>
         <li>
-          <%= link_to('https://www.facebook.com/vladimir.milic1?fref=ts') do %>
+          <%= link_to "https://www.facebook.com/vladimir.milic1?fref=ts", :target => "_blank" do %>
             <i class="fa fa-facebook-official fa-3x"></i>
           <% end %>
         </li>
         <li>
-          <%= link_to('https://www.youtube.com/user/totalstudiokm') do %>
+          <%= link_to "https://www.youtube.com/user/totalstudiokm", :target => "_blank" do %>
             <i class="fa fa-youtube-square fa-3x"></i>
           <% end %>
         </li>
         <li>
-          <%= link_to('https://www.facebook.com/vladimir.milic1?fref=ts') do %>
+          <%= link_to "https://www.facebook.com/vladimir.milic1?fref=ts" do %>
            <i class="fa fa-share-alt-square fa-3x"></i>
           <% end %>
         </li>

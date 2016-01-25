@@ -23,19 +23,19 @@
 			<div class="navbar-collapse collapse" id="navNav">
 				<ul class="nav navbar-nav">
 					<li>
-						<%= link_to "Home", root_path %>	
+						<%= link_to "HOME", root_path %>	
 					</li>
 					<li>
-						<%= link_to "Blog", blog_path %>
+						<%= link_to "BLOG", blog_path %>
 					</li>
           <li id="logo">
               <%= image_tag('Logocrni.png') %>
           </li>
 					<li>
-						<%= link_to "O nama", o_nama_path %>
+						<%= link_to "ABOUT", o_nama_path %>
 					</li>
 					<li>
-						<a href="#">Kontakt</a>
+						<a href="#">CONTACT</a>
 					</li>
 				</ul><!-- end navbar-nav -->
 			</div><!-- navbar-inverse -->
@@ -56,12 +56,12 @@
     <center>
       <ul>
         <li>
-          <%= link_to('https://www.facebook.com/vladimir.milic1?fref=ts') do %>
+          <%= link_to "https://www.facebook.com/vladimir.milic1?fref=ts", :target => "_blank" do %>
             <i class="fa fa-facebook-official fa-3x"></i>
           <% end %>
         </li>
         <li>
-          <%= link_to('https://www.youtube.com/user/totalstudiokm') do %>
+          <%= link_to "https://www.youtube.com/user/totalstudiokm", :target => "_blank" do %>
             <i class="fa fa-youtube-square fa-3x"></i>
           <% end %>
         </li>
