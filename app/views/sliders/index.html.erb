@@ -16,7 +16,7 @@
 <div class="container" id="indexBlog">
   <div class="page-header">
     <h1>RECENT WORK</h1>
-  </div>
+  </div><!-- end page-header -->
   <div class="row">
     <% @posts.in_groups_of(3, false).each do |group|  %>
       <div class="row" id="postred">
@@ -36,11 +36,12 @@
                     <%= link_to post.title, post %>
                   
                     <p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
-                  </div>
-                </div>
-              </div>  
-          </div>      
+                  </div><!-- end title -->
+                </div><!-- end overlay -->
+              </div><!-- end box -->  
+          </div><!-- end postred -->      
         <% end %>
-      </div>  
+      </div><!-- end indexBlog -->  
     <% end %>
-</div>
+  </div><!-- end row -->
+</div><!-- end container -->

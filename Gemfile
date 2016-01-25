@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 #Bootstrap-sass 
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem "font-awesome-rails"
 #simple_form 
 gem 'simple_form', '~> 3.2'
 #Pagination Gem Kaminari

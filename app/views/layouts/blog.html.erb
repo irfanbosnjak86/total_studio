@@ -108,8 +108,33 @@
 
   <%= yield %>
 </div>
-<!-- First try for the online version of jQuery
-  <script src="http://code.jquery.com/jquery.js"></script>-->
 
+<div class="footer">
+  <div class="row">
+    <center>
+      <ul>
+        <li>
+          <%= link_to('https://www.facebook.com/vladimir.milic1?fref=ts') do %>
+            <i class="fa fa-facebook-official fa-3x"></i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to('https://www.youtube.com/user/totalstudiokm') do %>
+            <i class="fa fa-youtube-square fa-3x"></i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to('https://www.facebook.com/vladimir.milic1?fref=ts') do %>
+           <i class="fa fa-share-alt-square fa-3x"></i>
+          <% end %>
+        </li>
+      </ul>
+    </center>
+  </div>
+  <div class="row" id="copyright">
+    <p>Copyright © 2016 | Vladimir Milić - TOTALSTUDIO | Kosovska Mitrovica | Worldwide </p>
+    <p>Irfan Bošnjak</p>
+  </div>
+</div>
 </body>
 </html>

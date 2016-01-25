@@ -12,16 +12,20 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+@import "font-awesome";
 @font-face {
       font-family: "Humanist521BT";
       src: url('/assets/humanst521-bt-bold-webfont.woff') format('woff');
 }
-
+@font-face {
+  font-family: "Humanist521BT Roman";
+      src: url('/assets/humanst521-bt-roman-11929-webfont.eot') format('eot');
+}
 body {
   background-color: #ededed;
   font-family: Humanist521BT;
@@ -79,6 +83,9 @@ body {
             text-align: right;
                
             }
+            .dropmenu > li > a {
+              font-size: 14px;
+            }
         }
     }	
   }
@@ -108,7 +115,7 @@ body {
             text-align: left;
             color: #323232;
             font-family: Humanist521BT;
-            font-size: 18px;
+            
             font-weight: 700;
             line-height: 17px;
           } 
@@ -190,12 +197,32 @@ input.form-control, textarea.form-control {
   #indexBlog {
     margin-top: 40px;
     height: 1000px;
+
+    #postred {
+    padding-left: 47px;
+    }
+  }
+  .footer {
+    margin-top: 60px;
+    p {
+      text-align: center;
+      padding-right: 20px;
+    }
+    ul{
+      padding: 0;
+    }
+    li {
+      padding-right: 20px;
+      margin-left: 0;
+      display: inline-block;
+    }
+    
+    a {
+      color: #323232;
+    }
   }
   
-  #postred {
-    padding-left: 47px;
-
-  }
+  
   .page-header {
     h1 {
       /* Text style for "RECENT WORK" */
@@ -213,8 +240,10 @@ input.form-control, textarea.form-control {
     vertical-align: top;
 
     a {
-       text-align: left;
-       margin-top: 0;
+      text-align: left;
+      margin-top: 0;
+      font-family: Humanist521BT;
+      font-size: 14px;
       } 
   }
   .navbar-nav > li > .dropdown-menu {
@@ -254,19 +283,23 @@ input.form-control, textarea.form-control {
               opacity:0;
               -webkit-transition: opacity .25s ease;
               -moz-transition: opacity .25s ease;
-            }
-  .title {
+              .title {
     h2 {
-      padding-top: 10%;
+      padding-top: 40%;
     }
 
     a {
-      font-family:Helvetica;
-               font-weight:900;
-               color:black;
-               font-size:45px;
+      /* Text style for title - overlay */
+      
+      color: #323232;
+      font-family: Humanist521BT;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 24px;
     }
   }
+            }
+  
   #box:hover #overlay {
                  opacity: .8;
                 }
@@ -418,7 +451,7 @@ a#postTitle {
 
     img {
           width: 100%;
-          max-height: 500px;
+          max-height: 700px;
         }
   }
 
@@ -438,6 +471,9 @@ a#postTitle {
 }
 #admin {
   margin-left: 44%;
+  a {
+    padding: 3px 0;
+  }
 }
 
 @media (min-width: 768px){
