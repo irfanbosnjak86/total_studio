@@ -18,17 +18,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
 @font-face {
-      font-family: "Humanist521BT";
-      src: url('/assets/humanst521-bt-bold-webfont.woff') format('woff');
+  font-family: "Calibri-Bold";
+      src: url('/assets/Calibri-Bold.eot') format('eot');
+      src: url('/assets/Calibri-Bold.ttf') format('ttf');
+      src: url('/assets/Calibri-Bold.woff') format('woff');
 }
-@font-face {
-  font-family: "Humanist521BT Roman";
-      src: url('/assets/humanst521-bt-roman-11929-webfont.eot') format('eot');
-}
+
 body {
   background-color: #ededed;
-  font-family: Humanist521BT;
+  font-family: Calibri-Bold;
   color: #323232;
 }
 
@@ -40,6 +40,28 @@ body {
   margin-top: 50px;
 }
 
+.scrollToTop{
+  
+  text-align:center; 
+  
+  font-weight: bold;
+  color: #444;
+  text-decoration: none;
+  position:relative;
+  display:none;
+}
+.scrollToTop:hover{
+  text-decoration:none;
+}
+#strelica {
+  margin-bottom: 60px;
+  .fa {
+    width: 1em;
+    background: white;
+    border-radius: 50%;
+  }
+
+}
 /* --------------------------------------
   Navbar
    -------------------------------------- */
@@ -72,10 +94,10 @@ body {
       		a {
             display:inline-block;
             text-align: center;
-            margin-top: 17%;
+            margin-top: 26%;
             /* Text style for "ABOUT" */
             color: #323232;
-            font-family: Humanist521BT;
+            font-family: Calibri-Bold;
             font-size: 14px;
             font-weight: 700;
             line-height: 17px;
@@ -110,10 +132,10 @@ body {
             }
 
           a {
-            margin-top: 17%;
+            margin-top: 26%;
             text-align: left;
             color: #323232;
-            font-family: Humanist521BT;
+            font-family: Calibri-Bold;
             font-size: 14px;
             font-weight: 700;
             line-height: 17px;
@@ -205,7 +227,7 @@ input.form-control, textarea.form-control {
     }
   }
   .footer {
-    margin-top: 60px;
+    margin-top: 30px;
     p {
       text-align: center;
       padding-right: 20px;
@@ -230,7 +252,7 @@ input.form-control, textarea.form-control {
       /* Text style for "RECENT WORK" */
       
       color: #323232;
-      font-family: Humanist521BT;
+      font-family: Calibri-Bold;
       font-size: 30px;
       font-weight: 700;
       line-height: 17px;
@@ -244,13 +266,14 @@ input.form-control, textarea.form-control {
     a {
       text-align: left;
       margin-top: 0;
-      font-family: Humanist521BT;
+      font-family: Calibri-Bold;
       font-size: 14px;
       } 
   }
   .navbar-nav > li > .dropdown-menu {
     
   }
+  
   .dropdown:hover .dropdown-menu {
       display: block;
       margin-top: 0; /* remove the gap so it doesn't close */
@@ -295,7 +318,7 @@ input.form-control, textarea.form-control {
       /* Text style for title - overlay */
       
       color: #323232;
-      font-family: Humanist521BT;
+      font-family: Calibri-Bold;
       font-size: 24px;
       font-weight: 700;
       line-height: 24px;
@@ -477,8 +500,8 @@ a#postTitle {
 
 #logo {
 	img {
-		width: 100%;
-		height: 100%;
+		width: 160px;
+		height: 160px;
 		position: relative;  
 	}
 }
@@ -487,6 +510,13 @@ a#postTitle {
   a {
     font-size: 14px;
     padding: 3px 0;
+  }
+  a {
+    color: black;
+  }
+  a:hover {
+    color: #00a7d1;
+    background: none;
   }
 }
 
