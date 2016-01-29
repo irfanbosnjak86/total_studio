@@ -9,8 +9,8 @@
   </div><!-- end carousel-inner -->
 
   <!-- Controls strelice -->
-    <a class="left carousel-control" data-slide="prev" href="#myCarousel"><span class="icon-prev"></span></a>
-    <a class="right carousel-control" data-slide="next" href="#myCarousel"><span class="icon-next"></span></a>
+    <a class="left carousel-control" data-slide="prev" href="#myCarousel"><i class="fa fa-angle-left fa-1"></i></a>
+    <a class="right carousel-control" data-slide="next" href="#myCarousel"><i class="fa fa-angle-right fa-1"></i></a>
 </div><!-- end myCarousel -->
 
 <div class="container" id="indexBlog">
@@ -32,10 +32,7 @@
                   <% end %>
                 <div id="overlay">
                   <div class="title">
-                    <h2><%= post.description %></h2>
-                    <%= link_to post.title, post %>
-                  
-                    <p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
+                    <h2><%= link_to post.title.upcase, post %></h2>
                   </div><!-- end title -->
                 </div><!-- end overlay -->
               </div><!-- end box -->  

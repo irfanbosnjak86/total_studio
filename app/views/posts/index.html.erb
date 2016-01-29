@@ -14,16 +14,13 @@
 									<% else %> 
 										<%= link_to post.title, post %>
 									<% end %>
+
 								<div id="overlay">
 									<div class="title">
-										<h2><%= post.description %></h2>
-										<%= link_to post.title, post %>
-									
-										<p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
+										<h2><%= link_to post.title.upcase, post %></h2>	
 									</div>
 								</div>
 							</div>
-							
 						</div>
 					</div>			
 				<% end %>
@@ -32,10 +29,12 @@
 	</div>
 	<div class="container">
 		<div class="row">
+		<center>
 		<ul id="paginate">
 			<li><h4>PAGE</h4></li>
 		 	<li><%= paginate @posts %></li>
 		</ul>
+		</center>
 		</div>
 	</div>
 </div>

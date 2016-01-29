@@ -1,20 +1,36 @@
 <div class="container">
-  <div class="page-wrapper">
-    <% @post.post_images.each do |images| %>
-      <div class="image-wrapper">
-        <%= image_tag images.photo.url(:medium) %>
-      </div>
-    <% end %>
-    <% @post.videos.each do |video| %>
-      <div class="embed-container">
-        <%= embed(video.url) %> 
-      </div> 
-    <% end %>
-    <h1><%= @post.category_name %></h1>
-    <h1><%= @post.title %></h1>
-    <p><%= @post.description %></p>
-    <br>
 
-    <%= link_to "Back", blog_path, class: "btn btn-default" %>
+  <div class="page-wrapper">
+    <div class="title">
+      <h2><%= @post.title.capitalize %></h2>
+    </div>
+    
+    <div class="description">
+      <p><%= @post.description %></p>
+    </div>
+
+    <div class="images">
+      <% @post.post_images.each do |images| %>
+        <div class="image-wrapper">
+          <%= image_tag images.photo.url(:medium) %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="videos">
+      <% @post.videos.each do |video| %>
+        <div class="embed-container">
+          <%= embed(video.url) %> 
+        </div> 
+      <% end %>
+    </div>
+    
+    <div class="links">
+      <%= link_to "Back", blog_path, class: "btn btn-default" %>
+      <% if admin_signed_in? %>
+        <%= link_to "Edit", edit_admin_post_path, class: "btn btn-default" %>
+        <%= link_to "Obrisi", admin_post_path, method: :delete, data: {confirm: "Jeste li sigurni?" }, class: "btn btn-default" %>
+      <% end %>
+    </div>
   </div>
 </div><!-- end container -->

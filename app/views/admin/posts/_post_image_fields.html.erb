@@ -9,9 +9,9 @@
   <% if f.object.photo_file_name.present? %>
     <div class="nested-fields">
       <div class="image-wrapper">
-        <%= image_tag f.object.photo.url('medium') %>
+        <%= image_tag f.object.photo.url('index') %>
       </div><!-- end image wrapper --> 
-      <div class="links">
+      <div class="buttons">
         <%= link_to_remove_association "Obrisi Sliku", f, class: "form-button btn btn-default" %>
       </div><!-- end links -->  
     </div><!-- end nested-fields -->

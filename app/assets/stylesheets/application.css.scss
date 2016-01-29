@@ -81,6 +81,7 @@ body {
  	font-size: 14px;
   text-align: center;
 	border: none;
+  padding-bottom: 100px;
   position: relative;
   	#navNav {
         .navbar-nav {
@@ -176,6 +177,49 @@ body {
 /* --------------------------------------
    Show
    -------------------------------------- */
+  .page-wrapper {
+    margin-top: 75px;
+    padding-top: 80px;
+    margin-left: 20px;
+    width: 1120px;
+    background-color: white;
+    text-align: center;
+    #images-show {
+      img {
+        padding-top: 8px;
+        width: 860px;
+        height: 570;
+      }
+    }
+    .page-header {
+      border: none;
+      padding-bottom: 50px;
+      width: 865px;
+      margin-left: 11.5%;
+      h2 {
+        font-size: 52px;
+      }
+      p {
+        font-size: 21px;
+      }
+    }
+    .title {
+      padding-bottom: 30px;
+    }
+    .videos {
+      padding-top: 20px;
+      padding-left: 8px;
+    }
+    .images {
+      padding-top: 2px;
+    }
+    .links {
+      text-align: left;
+      padding-left: 12px;
+      padding-bottom: 12px;
+    }
+  }
+
 .embed-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -185,6 +229,7 @@ body {
   width: 100%;
   height: auto;
   margin-bottom: 12px;
+  margin-left: 11%;
 } 
 
 .embed-container iframe,
@@ -192,8 +237,8 @@ body {
 .embed-container embed {
   position: absolute;
   top: 0; left: 0;
-  width: 100%;
-  height: 100%;
+  width: 860px;
+  height: 560px;
 }
 
 ul
@@ -211,6 +256,7 @@ li {
 
 input.form-control, textarea.form-control {
   width: 65% !important;
+  margin-left: 20%;
 }
 
 .add-button {
@@ -243,6 +289,7 @@ input.form-control, textarea.form-control {
     padding-left: 47px;
     }
     #paginate {
+      margin-right: 5%;
       padding: 0;
       margin-top: 70px;
       text-align: center;
@@ -254,7 +301,6 @@ input.form-control, textarea.form-control {
   }
   .footer {
     margin-top: 30px;
-    padding-left: 70px;
     p {
       text-align: center;
       padding-right: 20px;
@@ -278,7 +324,7 @@ input.form-control, textarea.form-control {
   .page-header {
     h1 {
       /* Text style for "RECENT WORK" */
-      
+      padding-left: 35px;
       color: #323232;
       font-family: Calibri-Bold;
       font-size: 30px;
@@ -327,19 +373,20 @@ input.form-control, textarea.form-control {
     }
 
   #overlay  { 
-              width:300px;
-              height:280px;
+              width:250px;
+              height:150px;
               background:white;
               text-align:center;
-              margin-top:40px;
-              margin-left: 26px;
+              margin-top:103px;
+              margin-left: 52px;
 
               opacity:0;
               -webkit-transition: opacity .25s ease;
               -moz-transition: opacity .25s ease;
               .title {
     h2 {
-      padding-top: 40%;
+      padding-top: 55px;
+      font-size: 24px;
     }
 
     a {
@@ -458,22 +505,69 @@ input.form-control, textarea.form-control {
    About
    -------------------------------------- */
 
-.image-wrapper {
-  padding-top: 15px;
-	img {
-		width: auto;
-		height: auto;
-    max-width: 740px;
-    max-height: 490px;
+/* --------------------------------------
+   Edit/New
+   -------------------------------------- */
+   #edit {
     
-		border: 2px solid darkgray;
-		margin-left: 50px;
-	}   
-}
+    h3 {
+        text-align: center;
+        text-decoration: underline;
+      }
+    #images {
+      
+      background: rgba(245, 245, 245, 0.61);
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      border: groove 1px;
+      padding-right: 1%;
+      margin-left: 1%;
+    }
+    #blocks {
 
-.page-wrapper {
-	margin-top: 20px;
-}
+      .form-inline.clearfix {
+        padding-top: 40px;
+        padding-bottom: 20px;
+        
+        a {
+          margin-top: 10px;
+        }
+      }
+      
+    }
+
+    #videos {
+      text-align: left;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      background: rgba(245, 245, 245, 0.61);
+      width: 46%;
+      border: groove 1px;
+      margin-left: 1%;
+      margin-right: 1%;
+      h3 {
+        padding-bottom: 20px;
+      }
+      a {
+        text-align: left;
+        margin-top: 20px;
+      }
+
+      .input.form-control, .form-control {
+        margin-left: 2px;
+      }
+
+      .form-inline.clearfix {
+        padding-top: 40px;
+        padding-bottom: 20px;
+      }
+      
+    }
+    .links {
+        margin-top: 40px;
+      }
+   }
 
 /* --------------------------------------
    Pages 
@@ -507,6 +601,10 @@ a#postTitle {
           width: 100%;
           max-height: 700px;
         }
+    .fa {
+      font-size: 130px;
+      margin-top: 100%;
+    }
   }
   .carousel-control.left, .carousel-control.right {
    background-image:none !important;
