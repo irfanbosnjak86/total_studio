@@ -4,9 +4,9 @@ class PostsController < ApplicationController
 
   def index
     if params[:category_name]
-      @posts = Post.where(:category_name => params[:category_name]).order("created_at DESC").page(params[:page]).per(3)
+      @posts = Post.where(:category_name => params[:category_name]).order("created_at DESC").page(params[:page]).per(6)
     else
-      @posts = Post.all.order("created_at DESC").page(params[:page]).per(3)
+      @posts = Post.all.order("created_at DESC").page(params[:page]).per(6)
     end
   end
 

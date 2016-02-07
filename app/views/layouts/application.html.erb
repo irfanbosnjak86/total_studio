@@ -23,19 +23,19 @@
 			<div class="navbar-collapse collapse" id="navNav">
 				<ul class="nav navbar-nav">
 					<li>
-						<%= link_to "HOME", root_path %>	
+						<%= link_to "HOME", root_path, id: 'home' %>	
 					</li>
 					<li>
-						<%= link_to "BLOG", blog_path %>
+						<%= link_to "BLOG", blog_path, id: 'blog' %>
 					</li>
           <li id="logo">
               <%= image_tag('Logo Total 160 pixela.png') %>
           </li>
 					<li>
-						<%= link_to "ABOUT", o_nama_path %>
+						<%= link_to "ABOUT", o_nama_path, id: 'about' %>
 					</li>
 					<li>
-						<a href="#">CONTACT</a>
+						<%= link_to "CONTACT", contact_path, id: 'contact' %>
 					</li>
 				</ul><!-- end navbar-nav -->
 			</div><!-- navbar-inverse -->

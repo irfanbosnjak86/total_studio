@@ -91,7 +91,8 @@ body {
           vertical-align: top;
           width: 100%;
           background-color: #ededed;
-
+          padding-bottom: 30px;
+          padding-top: 30px;
           li {
             
             margin-left: 0;
@@ -99,7 +100,7 @@ body {
             
           }  
           
-
+          
       		a {
             display:inline-block;
             text-align: center;
@@ -109,7 +110,7 @@ body {
             font-family: Calibri-Bold;
             font-size: 14px;
             font-weight: 700;
-            line-height: 17px;
+            
       		}
           a.current {
               border-bottom: solid 2px;
@@ -120,7 +121,6 @@ body {
             text-align: right;   
           }
 
-           
         }
     }	
   }
@@ -138,11 +138,18 @@ body {
           margin: 0;
           vertical-align: top;
           width: 100%;
+          padding-bottom: 30px;
+          padding-top: 30px;
           
           li {
               margin-left: 0;
               height: 100%;
               width: 20%; 
+              .active {
+                a {
+                  color: red;
+                  }
+              }
             }
 
           a {
@@ -152,8 +159,10 @@ body {
             font-family: Calibri-Bold;
             font-size: 14px;
             font-weight: 700;
-            line-height: 17px;
+            
           }
+
+
           
             .desno {
             text-align: right;
@@ -172,8 +181,6 @@ body {
 #mojButton {
   margin-top: 0;
   }
-
-
 /* --------------------------------------
    Show
    -------------------------------------- */
@@ -187,8 +194,8 @@ body {
     #images-show {
       img {
         padding-top: 8px;
-        width: 860px;
-        height: 570;
+        width: 740px;
+        
       }
     }
     .page-header {
@@ -200,11 +207,20 @@ body {
         font-size: 52px;
       }
       p {
-        font-size: 21px;
+        font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+        font-size: 16px;
       }
     }
     .title {
+      font-size: 32px;
       padding-bottom: 30px;
+    }
+    .description {
+      p {
+        font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+        font-size: 16px;
+        color: #323232;
+      }
     }
     .videos {
       padding-top: 20px;
@@ -284,7 +300,6 @@ input.form-control, textarea.form-control {
   #indexBlog {
     margin-top: 40px;
     margin-bottom: 40px;
-
     #postred {
     padding-left: 47px;
     }
@@ -358,8 +373,8 @@ input.form-control, textarea.form-control {
    Tranzicija bela kocka
    -------------------------------------- */
   #box  { 
-          width:355px;
-          height:355px;
+          width:300px;
+          height:300px;
           box-shadow:inset 1px 1px 40px 0 rgba(0,0,0,.45);
           border-bottom:2px solid #fff;
           border-right:2px solid #fff;
@@ -368,6 +383,8 @@ input.form-control, textarea.form-control {
           background-size:cover;
           overflow:hidden;
           img {
+            width:300px;
+          height:300px;
             position: absolute;
           }
     }
@@ -377,8 +394,8 @@ input.form-control, textarea.form-control {
               height:150px;
               background:white;
               text-align:center;
-              margin-top:103px;
-              margin-left: 52px;
+              margin-top:25%;
+              margin-left: 8% ;
 
               opacity:0;
               -webkit-transition: opacity .25s ease;
@@ -504,7 +521,34 @@ input.form-control, textarea.form-control {
 /* --------------------------------------
    About
    -------------------------------------- */
+#about-page {
+  padding-left: 10%;
+  padding-right: 11%;
+  padding-top: 40px;
+  padding-bottom: 20%;
+  img {
+    margin-top: 73px;  
+  }
 
+  .description {
+    margin-top: 71px;
+  }
+
+}
+#contact-page {
+  padding-left: 10%;
+  padding-right: 11%;
+  padding-top: 40px;
+  padding-bottom: 20%;
+  height: 100%;
+  .description {
+      padding-top: 71px;
+      
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 21px;
+    }
+}
 /* --------------------------------------
    Edit/New
    -------------------------------------- */
@@ -652,5 +696,31 @@ a#postTitle {
         margin: 0 auto;
         display: table;
         table-layout: fixed;
-    }
+      }
 }
+@media only screen and (min-width: 1900px){
+  
+      #navNav, #navBlog {
+        a {
+            font-size: 16px;
+            font-weight: 700;
+            
+          }
+        }
+    
+    }
+@media only screen and (max-width: 767px) { 
+    .page-wrapper {
+      width: 700px;
+      .title {
+      font-size: 12px;
+      }
+    }
+    .container {
+      max-width: 700px;
+    }
+    img {
+      width: auto;
+    }
+   
+  }

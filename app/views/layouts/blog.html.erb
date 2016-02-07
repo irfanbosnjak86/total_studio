@@ -27,10 +27,10 @@
       <div class="container">
         <ul class="nav navbar-nav">
           <li>
-            <%= link_to "HOME", root_path %>  
+            <%= link_to "HOME", root_path, id: 'home' %>  
           </li>
           <li class="dropdown">
-            <%= link_to blog_path(@posts), { class: 'dropdown-toggle disabled', 'data-toggle' => 'dropdown' } do %>
+            <%= link_to blog_path(@posts), { class: 'dropdown-toggle disabled', 'data-toggle' => 'dropdown', id: 'blog' } do %>
             BLOG
              <span class="caret"></span>
             <% end %>
@@ -56,10 +56,10 @@
               <%= image_tag('Logo Total 160 pixela.png') %>
           </li>
           <li>
-            <%= link_to "ABOUT", o_nama_path, class: "desno" %>
+            <%= link_to "ABOUT", o_nama_path, class: "desno", id: 'about' %>
           </li>
           <li>
-            <a href="#" class="desno">CONTACT</a>
+            <%= link_to "CONTACT", contact_path, class: "desno", id: 'contact' %>
           </li>
           
         </ul><!-- end navbar-nav -->
