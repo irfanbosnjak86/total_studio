@@ -1,7 +1,7 @@
 <%= simple_form_for @post, html: { multipart: true } do |f| %>
   <% if @post.errors.any? %>
     <div id="errors">
-      <p><%= @post.errors.count %> Onemogucilo kreiranje slidera </p>
+      <p><%= @post.errors.count %> Greška Onemogućilo Kreiranje Posta </p>
       <ul>
         <% @post.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
@@ -12,7 +12,7 @@
 
   <div class="panel-body">
     <div class="page-header">
-    <%= f.input :title, label: "Naslov", input_html: { class: 'form-control' } %>
+    <%= f.input :title, label: "Naslov", autofocus: true, input_html: { class: 'form-control' } %>
     <br>
     <%= f.input :description, label: "Kratki Opis", input_html: { class: 'form-control' } %>
     <br>

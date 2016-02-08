@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-fileupload/basic
+//= require jquery.turbolinks
 //= require cocoon
 //= require turbolinks
 //= require bootstrap
@@ -20,6 +21,17 @@
 
 $(document).ready(function(){
   
+   $('.navbar-nav').find("[href]").each(function() {
+    if (this.href == window.location.href) {
+        $(this).addClass("underline");
+    }
+    });
+   $('.dropdown').find("[href]").each(function() {
+    if (this.href == window.location.href) {
+        $(this).attr("id", "underline");
+    }
+    });
+
   //Check to see if the window is top if not then display button
   $(window).scroll(function(){
     if ($(this).scrollTop() > 100) {
@@ -34,4 +46,6 @@ $(document).ready(function(){
     $('html, body').animate({scrollTop : 0},800);
     return false;
   });
+
 });
+
