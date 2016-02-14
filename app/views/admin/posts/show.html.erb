@@ -10,8 +10,12 @@
         <p><%= @post.description %></p>
       </div>
     </div>
-
     
+     <% if admin_signed_in? %>
+      <div class="date">
+        <p><%= @post.datum %></p>
+      </div>
+    <% end %>
 
     <div class="images">
       <% @post.post_images.each do |images| %>
