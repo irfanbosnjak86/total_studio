@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160111012321) do
+ActiveRecord::Schema.define(version: 20160214010157) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20160111012321) do
     t.datetime "updated_at",    null: false
     t.string   "category_name"
     t.integer  "admin_id"
+    t.date     "datum"
   end
 
   create_table "slider_images", force: :cascade do |t|

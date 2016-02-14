@@ -8,6 +8,10 @@
     <div class="description">
       <p><%= @post.description %></p>
     </div>
+    
+    <div class="date">
+      <p><%= @post.datum %></p>
+    </div>
 
     <div class="images">
       <% @post.post_images.each do |images| %>
@@ -26,8 +30,8 @@
     </div>
     
     <div class="links">
-      <%= link_to "Back", blog_path, class: "btn btn-default" %>
-      <% if admin_signed_in? %>
+      <% if admin_signed_in? %>  
+        <%= link_to "Back", blog_path, class: "btn btn-default" %>
         <%= link_to "Edit", edit_admin_post_path, class: "btn btn-default" %>
         <%= link_to "Obrisi", admin_post_path, method: :delete, data: {confirm: "Jeste li sigurni?" }, class: "btn btn-default" %>
       <% end %>

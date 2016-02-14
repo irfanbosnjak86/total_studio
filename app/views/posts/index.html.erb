@@ -4,8 +4,7 @@
 			<div class="row" id="postred">
 				<% group.each do |post| %>
 					<div class="col-md-4" id="post">
-						<div>
-								
+						<div>	
 								<% if post.post_images.present? %>	
 								<div id="box">				
 									<%= link_to post do %>
@@ -15,26 +14,24 @@
 										<%= link_to post.title, post %>
 									<% end %>
 
-								<div id="overlay">
-									<div class="title">
-										<h2><%= link_to post.title.upcase, post %></h2>	
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>			
+									<div id="overlay">
+										<div class="title">
+											<h2><%= link_to post.title.upcase, post %></h2>	
+										</div><!-- end title -->
+									</div><!-- end overlay -->
+								</div><!-- end box -->
+						</div><!-- end div -->
+					</div><!-- end post -->			
 				<% end %>
-			</div>	
+			</div><!-- end postred -->	
 		<% end %>
-	</div>
-	<div class="container">
-		<div class="row">
-		<center>
-		<ul id="paginate">
-			<li><h4>PAGE</h4></li>
-		 	<li><%= paginate @posts %></li>
-		</ul>
-		</center>
-		</div>
-	</div>
-</div>
+	</div><!-- end row -->
+</div><!-- end indexBlog -->
+<div class="container">
+	<div class="row" id="paginate">
+		 <div class="col-md-4 col-md-offset-4">
+			<h4>PAGE</h4>
+			<%= paginate @posts %>
+		</div><!-- end col-md-offset -->
+	</div><!-- end paginate -->
+</div><!-- end container -->

@@ -82,7 +82,7 @@ body {
     color: #00a7d1;
     }
   }
-
+  
 /* --------------------------------------
   Navbar
    -------------------------------------- */
@@ -122,7 +122,8 @@ body {
       		}
 
           .desno {
-            text-align: right;   
+            text-align: right;
+            margin-right: 10px;   
           }
 
         }
@@ -155,8 +156,7 @@ body {
             color: #323232;
             font-family: Calibri-Bold;
             font-size: 14px;
-            font-weight: 700;
-            
+            font-weight: 700;  
           }
 
 
@@ -166,6 +166,11 @@ body {
              
           }
           .dropdown-menu {
+            a {
+              margin: 0;
+              padding-top: 0;
+            }
+
             a:hover {
             color: #00a7d1;
             background: none;
@@ -195,6 +200,9 @@ body {
     }
     .page-header {
       border: none;
+      padding-right: 10%;
+      padding-left: 10%;
+
       p {
         font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
         font-size: 16px;
@@ -283,20 +291,21 @@ input.form-control, textarea.form-control {
   }
 
 }
+#home, #blog {
+  text-align: right;
+}
 /* --------------------------------------
    Index
    -------------------------------------- */
-  #indexBlog {
-    margin-bottom: 40px;
-    #postred {
-    padding-left: 47px;
-    }
     #paginate {
-      margin-right: 60px;
       padding: 0;
-      margin-top: 70px;
       text-align: center;
     }
+  #indexBlog {
+    margin-bottom: 40px;
+    width: 920px;
+
+   
   }
   .page.current {
     border-bottom: solid 2px;
@@ -391,16 +400,17 @@ input.form-control, textarea.form-control {
       font-size: 24px;
     }
 
-    a {
-      /* Text style for title - overlay */
-      
-      color: #323232;
-      font-family: Calibri-Bold;
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 24px;
-    }
-  }
+        a {
+          /* Text style for title - overlay */
+          
+          color: #323232;
+          font-family: Calibri-Bold;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 24px;
+          background: none;
+        }
+      }
             }
   
   #box:hover #overlay {
@@ -506,34 +516,35 @@ input.form-control, textarea.form-control {
 /* --------------------------------------
    About
    -------------------------------------- */
-#about-page {
-  padding-left: 10%;
-  padding-right: 11%;
-  padding-top: 40px;
-  padding-bottom: 20%;
-  img {
-    margin-top: 73px;  
-  }
-
-  .description {
-    margin-top: 71px;
-  }
-
-}
-#contact-page {
-  padding-left: 10%;
-  padding-right: 11%;
-  padding-top: 40px;
-  padding-bottom: 20%;
-  height: 100%;
-  .description {
-      padding-top: 71px;
-      
-      font-size: 17px;
-      font-weight: 400;
-      line-height: 21px;
+  #contact-page, #about-page {
+    padding-left: 10%;
+    padding-right: 11%;
+    padding-top: 40px;
+    padding-bottom: 20%;
+  } 
+   #about-page.page-wrapper, #contact-page.page-wrapper {
+    margin-right: 7px;
+   }
+  #about-page {
+    img {
+      margin-top: 73px;  
     }
-}
+    .description {
+      margin-top: 71px;
+    }
+  }
+
+  #contact-page {
+    height: 100%;
+    
+
+    .description {
+        padding-top: 71px;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 21px;
+      }
+  }
 /* --------------------------------------
    Edit/New
    -------------------------------------- */
@@ -636,6 +647,7 @@ a#postTitle {
    background-image:none !important;
    filter:none !important;
   }
+  
   .carousel-control {
     opacity: 0;
   }
@@ -692,14 +704,15 @@ a#postTitle {
       padding-top: 0;
       }
     }
-
+    .desno {
+      margin-right: 10px;
+    }
     #myCarousel {
       img {
         max-height: 550px;
       }
     }
     .page-header {
-      padding: 0 110px 0 110px;
       h2 {
         font-size: 36px;
       }
@@ -708,7 +721,7 @@ a#postTitle {
 @media only screen and (min-width: 1900px){
   
   .container {
-    width: 1160px;
+    width: 1000px;
   }
   #mojNav {
     #navNav {
@@ -738,18 +751,8 @@ a#postTitle {
   #indexBlog {
   }
 
-  .page-wrapper {
-    
-   
-    width: 1120px;
-  }
-
   .page-header {
       border: none;
-      padding-bottom: 50px;
-      width: 865px;
-      margin-left: 11.5%;
-      padding: 0 52px 0 52px;
       h2 {
         font-size: 52px;
       }
