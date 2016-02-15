@@ -1,3 +1,4 @@
+
 <%= simple_form_for @slider, html: { multipart: true } do |f| %>
   <% if @slider.errors.any? %>
     <div class="errors">
@@ -12,19 +13,29 @@
   <div class="panel-body">
     <%= f.input :slider_name, input_html: { class: 'form-control' } %>
 
-  <div class="slider-image">
-    <%= f.simple_fields_for :slider_images do |slider| %>
-      <% if f.object.new_record? %>
-        <%= slider.file_field :image, f: slider %>
-      <% else %>
-      <% unless slider.object.image.blank? %>
-        <%= image_tag slider.object.image.url('thumb') %>
-      <% end %>
-        <%= slider.file_field :image, f: slider %>
-      <% end %>
-    <% end %>
-  </div>
+    <div class="slider-image">
+      <%= f.simple_fields_for :slider_images do |slider| %>
+      
+        <% if f.object.new_record? %>
+          <div class="newslider">
+            <%= slider.file_field :image, f: slider, class: "btn btn-primary" %>
+            <br>
+          </div>
+          <% else %>
 
-    <%= f.button :submit, class: "btn btn-primary" %>
+            <% unless slider.object.image.blank? %>
+            <div class="slideimages">
+              <%= image_tag slider.object.image.url('medium') %>
+
+            <% end %>
+              <%= slider.file_field :image, f: slider, class: "btn btn-primary" %>
+            </div>
+        <% end %>
+      <% end %>
+      <br>
+      <%= f.button :submit, class: "btn btn-primary" %>
+    </div>
   </div>
+    
+  
 <% end %>

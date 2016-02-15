@@ -1,3 +1,4 @@
+<div class="page-wrapper">
 <div class="container">
   <h1><%= @slider.slider_name %></h1>
   <% @slider.slider_images.each do |f| %>
@@ -6,4 +7,5 @@
   <%= link_to "Back", blog_path, class: "btn btn-default" %>
   <%= link_to "Edit", edit_slider_path, class: "btn btn-default" %>
   <%= link_to "Obrisi", slider_path, method: :delete, data: {confirm: "Jeste li sigurni?" }, class: "btn btn-default" %>
+</div>
 </div>

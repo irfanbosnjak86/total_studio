@@ -49,6 +49,28 @@ body {
     padding-bottom: 40px;
   }
 }
+#slideredit {
+  padding-bottom: 40px;
+  .container {
+    width: 945px;
+  }
+  .slideimages {
+    background-color: #ededed;
+    width: 300px;
+    padding-bottom: 20px;
+    img {
+      margin: 10px 0 10px 0;
+      width: 268px;
+    }
+  }
+   input[type="file"] {
+      margin-top: 20px;
+    }
+  input.form-control {
+    width: 35% !important;
+    margin-left: 0px;
+  }
+}
 /* --------------------------------------
    Global 
    -------------------------------------- */
