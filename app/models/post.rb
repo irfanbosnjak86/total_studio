@@ -7,4 +7,6 @@ class Post < ActiveRecord::Base
   accepts_nested_attributes_for :videos, :allow_destroy => true
 
   validates :title, :category_name,  presence: true
+
+
 end

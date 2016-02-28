@@ -13,8 +13,7 @@
  *= require_tree .
  *= require_self
  *= require font-awesome
- *= require jquery.fileupload
- *= require jquery.fileupload-ui
+
  */
 
 @import "bootstrap-sprockets";
@@ -36,6 +35,10 @@ body {
     color:#323232; 
   }
 
+}
+.upload .progress .bar {
+  background: none repeat scroll 0 0 #3EC144;
+  height: 100%;
 }
 .underline {
   text-decoration: underline;

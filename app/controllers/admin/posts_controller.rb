@@ -1,21 +1,32 @@
 class Admin::PostsController < ApplicationController
   before_action :find_posts, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_admin!, except: [:index, :show]
+  skip_before_action :verify_authenticity_token
   layout "blog"
 
-
+  
   def new
     @post =  current_admin.posts.build 
     @post.post_images.build
     @post.videos.build
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @post }
+    end
   end
 
   def create
+    
     @post = current_admin.posts.build(post_params)
-    if @post.save 
-      redirect_to ([ :admin, @post ]), notice: "Uspesno kreiran post!"
-    else
-      render 'new'
+     respond_to do |format|
+      if @post.save
+        format.html { redirect_to ([ :admin, @post ]) }
+        format.js { j render '/admin/show'}
+      else
+        format.html { render action: "new" }
+        format.json { render json: [:admin, @post.errors], status: :unprocessable_entity }
+      end
     end
   end
 
@@ -34,6 +45,8 @@ class Admin::PostsController < ApplicationController
     @post.destroy
     redirect_to '/blog', notice: "Uspesno obrisan post!"
   end
+
+  
 
   private
 

@@ -40,8 +40,9 @@ gem 'devise', '~> 3.5', '>= 3.5.3'
 #Jquery Upload
 gem 'jquery-fileupload-rails', '~> 0.4.6'
 gem 'shareable'
-
-
+#gem 'less-rails'
+#gem 'therubyracer'
+#gem 'remotipart', '~> 1.2'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
