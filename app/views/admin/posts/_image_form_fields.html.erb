@@ -1,0 +1,2 @@
+<%= image_tag f.object.photo.url('index') %>
+<%= f.file_field :photo, multiple: true, name: 'post[post_images_attributes][][photo]' %>

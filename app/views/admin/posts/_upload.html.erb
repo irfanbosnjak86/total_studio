@@ -1,0 +1,5 @@
+<% @post.post_images.each do |images| %>
+  <div class="image-wrapper" id="images-show">
+    <%= image_tag images.photo.url(:medium) %>
+  </div>
+<% end %>
