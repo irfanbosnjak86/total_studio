@@ -9,16 +9,18 @@ Rails.application.routes.draw do
     resources :posts
     resources :sliders
     resources :abouts
+    resources :contacts
   end 
 
   resources :posts, module: 'admin'
   resources :sliders, module: 'admin' 
   resources :abouts, module: 'admin'
+  resources :contacts, module: 'admin'
 
   root 'sliders#index'
 
-  get 'o_nama' => 'abouts#show'
-  get 'contact' => 'pages#contact'
+  get 'about_page' => 'abouts#show'
+  get 'contact_page' => 'contacts#show'
   get 'blog' => 'posts#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

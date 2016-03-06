@@ -10,7 +10,7 @@
   </thead>
 
   <tbody>
-    <% @admin_contacts.each do |admin_contact| %>
+    <% @contacts.each do |admin_contact| %>
       <tr>
         <td><%= link_to 'Show', admin_contact %></td>
         <td><%= link_to 'Edit', edit_admin_contact_path(admin_contact) %></td>

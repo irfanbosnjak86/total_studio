@@ -32,6 +32,7 @@ body {
   background-color: #ededed;
   font-family: Calibri-Bold;
   color: #323232;
+  padding-right: 2%;
   a {
     color:#323232; 
   }
@@ -322,6 +323,7 @@ input.form-control, textarea.form-control {
     #paginate {
       padding: 0;
       text-align: center;
+      margin-left: 20px;
     }
   #indexBlog {
     margin-bottom: 40px;
@@ -335,6 +337,7 @@ input.form-control, textarea.form-control {
   }
   .footer {
     margin-top: 30px;
+    margin-left: 40px;
     p {
       text-align: center;
       padding-right: 20px;
@@ -654,7 +657,7 @@ a#postTitle {
 
   #myCarousel {
   	
-    width: 100%;
+    width: 102%;
     height:auto;
 
     img {

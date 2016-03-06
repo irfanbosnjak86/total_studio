@@ -54,10 +54,10 @@
               <%= image_tag('Logo Total 160 pixela.png') %>
           </li>
           <li>
-              <%= link_to "ABOUT", o_nama_path, class: "desno", id: 'about'%>
+              <%= link_to "ABOUT", about_page_path, class: "desno", id: 'about'%>
           </li>
           <li>
-            <%= link_to "CONTACT", contact_path, class: "desno", id: 'contact' %>
+            <%= link_to "CONTACT", contact_page_path, class: "desno", id: 'contact' %>
           </li>
           
         </ul><!-- end navbar-nav -->
@@ -84,7 +84,7 @@
                       <% end %>
                   </li>
                   <li>
-                    <%= link_to "#" do %>
+                    <%= link_to edit_admin_contact_path(@contact = Contact.last) do %>
                       <span class="glyphicon glyphicon-file"></span>Contact Edit
                     <% end %>
                   </li>
