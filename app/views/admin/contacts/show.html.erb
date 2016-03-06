@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 <div class="container" >
  <div class="page-wrapper" id="about-page">
   
@@ -9,11 +9,11 @@
       </div>
 
       <div class="description" >
-        <p><%= @contact.description %></p>
+        <p><%= simple_format @contact.description %></p>
       </div><!-- end descritpion -->
     </div><!-- end col-12 -->
   </div><!-- end row -->
 <%= link_to 'Edit', edit_admin_contact_path(@contact) %> |
-<%= link_to 'Back', admin_contacts_path %>
+<%= link_to 'Back', root_path %>
 </div><!-- end page-wrapper -->
 </div><!-- end container -->
