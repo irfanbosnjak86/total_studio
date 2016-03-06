@@ -1,0 +1,18 @@
+<%= simple_form_for(@about) do |f| %>
+  <%= f.error_notification %>
+  <div class="panel-body">
+    <div class="page-header">
+      <div class="form-inputs">
+        <%= f.input :title, label: "Naslov", autofocus: true, input_html: { class: 'form-control' } %>
+        <br>
+        <%= f.input :description, label: "Opis", input_html: { class: 'form-control' } %>
+
+        <%= f.file_field :photo %> 
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit,  class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+<% end %>

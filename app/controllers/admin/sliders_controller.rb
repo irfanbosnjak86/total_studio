@@ -1,7 +1,6 @@
 class Admin::SlidersController < ApplicationController
 before_action :find_slider, only: [:show, :edit, :update, :destroy]
 before_action :authenticate_admin!, except: [:index]
-layout "blog", except: [:index]
 
   def index
     @slider = Slider.last

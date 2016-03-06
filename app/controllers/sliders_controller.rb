@@ -1,5 +1,4 @@
 class SlidersController < ApplicationController
-  layout "blog"
   
   def index
     @slider = Slider.last

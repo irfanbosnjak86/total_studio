@@ -8,10 +8,12 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :posts
     resources :sliders
+    resources :abouts
   end 
 
   resources :posts, module: 'admin'
   resources :sliders, module: 'admin' 
+  resources :abouts, module: 'admin'
 
   root 'sliders#index'
 

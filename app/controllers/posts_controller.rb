@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :find_posts, only: [:show, :edit, :update, :destroy]
-  layout "blog"
+
 
   def index
     if params[:category_name]
