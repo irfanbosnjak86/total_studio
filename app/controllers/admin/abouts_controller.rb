@@ -1,15 +1,6 @@
 class Admin::AboutsController < ApplicationController
   before_action :set_admin_about, only: [:show, :edit, :update, :destroy]
-
-
-  # GET /admin/abouts
-  # GET /admin/abouts.json
-  def index
-    @abouts = About.all
-  end
-
-  # GET /admin/abouts/1
-  # GET /admin/abouts/1.json
+  before_action :authenticate_admin!, except: [:show]
   def show
   end
 

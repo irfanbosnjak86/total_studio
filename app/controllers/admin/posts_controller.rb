@@ -1,6 +1,6 @@
 class Admin::PostsController < ApplicationController
   before_action :find_posts, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_admin!, except: [:index, :show]
+  before_action :authenticate_admin!, except: [:show]
 
   def new
     @post =  current_admin.posts.build 

@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   root 'sliders#index'
 
-  get 'o_nama' => 'pages#about'
+  get 'o_nama' => 'abouts#show'
   get 'contact' => 'pages#contact'
   get 'blog' => 'posts#index'
   # The priority is based upon order of creation: first created -> highest priority.

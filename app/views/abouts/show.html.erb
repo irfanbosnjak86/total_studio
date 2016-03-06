@@ -1,0 +1,21 @@
+<div class="container" >
+ <div class="page-wrapper" id="about-page">
+  <div class="row">
+    <div class="profilna">
+      <%= image_tag @about.photo.url('medium') %>
+    </div><!-- end profilna -->
+  </div><!-- end row -->
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="title">
+        <%= @about.title %>
+      </div>
+
+      <div class="description" >
+        <p><%= @about.description %></p>
+      </div><!-- end descritpion -->
+    </div><!-- end col-12 -->
+  </div><!-- end row -->
+</div><!-- end page-wrapper -->
+</div><!-- end container -->
+
