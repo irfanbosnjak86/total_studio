@@ -1,4 +1,4 @@
-<%= simple_form_for [:admin, @post], html: { multipart: true, id: "fileupload" } do |f| %>
+<%= simple_form_for @post, html: { multipart: true } do |f| %>
   <% if @post.errors.any? %>
     <div id="errors">
       <p><%= @post.errors.count %> Greška Onemogućilo Kreiranje Posta </p>
@@ -62,9 +62,8 @@
     </div>
     </div><!-- end row -->
     <div class="links">
-    <%= f.button :submit, class: "btn btn-primary start", id: 'submit-data' %>
+    <%= f.button :submit, class: "btn btn-primary", id: 'submit-data' %>
     <%= link_to 'Back', blog_path, class: "btn btn-default" %>
     </div>
   </div><!-- end panel-body -->
 <% end %>
-
