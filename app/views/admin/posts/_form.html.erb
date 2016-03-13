@@ -1,4 +1,4 @@
-<%= simple_form_for @post, html: { multipart: true } do |f| %>
+<%= simple_form_for [:admin, @post], html: { multipart: true, id: "fileupload" } do |f| %>
   <% if @post.errors.any? %>
     <div id="errors">
       <p><%= @post.errors.count %> Greška Onemogućilo Kreiranje Posta </p>
@@ -32,11 +32,12 @@
         
           <div id="blocks">
                 <%= f.simple_fields_for :post_images do |slika| %>
-                
-                    <%= render 'post_image_fields', f: slika %>
-
-                    
-                      <%= link_to_add_association 'Dodaj Sliku', f, :post_images, class: "btn btn-success add-button" %>
+                    <% if slika.object.photo_file_name.present? %>
+                          <div class="image-wrapper" >
+                            <%= image_tag slika.object.photo.url('medium') %>
+                          </div><!-- end image wrapper --> 
+                    <% end %>
+                     <%= render 'jquery_file_fields', f: slika %>
                    
                 <% end %>
           </div><!-- end images -->
@@ -61,8 +62,9 @@
     </div>
     </div><!-- end row -->
     <div class="links">
-    <%= f.button :submit, class: "btn btn-primary" %>
+    <%= f.button :submit, class: "btn btn-primary start", id: 'submit-data' %>
     <%= link_to 'Back', blog_path, class: "btn btn-default" %>
     </div>
   </div><!-- end panel-body -->
 <% end %>
+

@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery-fileupload/basic
+//= require jquery-fileupload
 //= require jquery.turbolinks
 //= require cocoon
 //= require turbolinks

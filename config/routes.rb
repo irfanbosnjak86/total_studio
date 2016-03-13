@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   resources :contacts, module: 'admin'
 
   root 'sliders#index'
-
+  
   get 'about_page' => 'abouts#show'
   get 'contact_page' => 'contacts#show'
   get 'blog' => 'posts#index'
