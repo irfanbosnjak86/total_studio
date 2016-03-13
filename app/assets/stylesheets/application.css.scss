@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  *= require font-awesome
+ *= require jquery.fileupload
  *= require jquery.fileupload-ui
  */
 
@@ -36,6 +37,13 @@ body {
     color:#323232; 
   }
 
+}
+
+.image-frame {
+  border: 1px dashed #333;
+  width: 400px;
+  height: 300px;
+  margin: 0 0 10px;
 }
 .underline {
   text-decoration: underline;
@@ -217,6 +225,7 @@ body {
       img {
         padding-top: 8px;
         width: 740px;
+        
         
       }
     }

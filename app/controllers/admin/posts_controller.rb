@@ -1,6 +1,7 @@
 class Admin::PostsController < ApplicationController
   before_action :find_posts, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_admin!, except: [:show]
+  skip_before_filter :verify_authenticity_token  
 
   def new
     @post =  current_admin.posts.build 

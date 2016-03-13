@@ -32,12 +32,10 @@
         
           <div id="blocks">
                 <%= f.simple_fields_for :post_images do |slika| %>
-                    <% if slika.object.photo_file_name.present? %>
-                          <div class="image-wrapper" >
-                            <%= image_tag slika.object.photo.url('medium') %>
-                          </div><!-- end image wrapper --> 
-                    <% end %>
-                     <%= render 'jquery_file_fields', f: slika %>
+  
+                    <div id="image-wrapper" ></div><!-- end image wrapper --> 
+
+                    <%= render 'jquery_file_fields', f: slika %>
                    
                 <% end %>
           </div><!-- end images -->
@@ -62,7 +60,7 @@
     </div>
     </div><!-- end row -->
     <div class="links">
-    <%= f.button :submit, class: "btn btn-primary", id: 'submit-data' %>
+    <%= f.button :submit, class: "btn btn-primary start", id: 'submit-data' %>
     <%= link_to 'Back', blog_path, class: "btn btn-default" %>
     </div>
   </div><!-- end panel-body -->

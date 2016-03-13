@@ -12,7 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery-fileupload
+//= require jquery-fileupload/basic
+//= require jquery-fileupload/basic-plus
 //= require jquery.turbolinks
 //= require cocoon
 //= require turbolinks
@@ -47,5 +48,33 @@ $(document).ready(function(){
     return false;
   });
 
+  function displayThumbnail(input) {
+    for( var i = 0;i<input.files.length;i++){
+      if (input.files && input.files[i]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+              if ($('#upload-image')) {
+                        var $newImageThumbnail = makeElement('img',{ class: "image-frame",src: e.target.result});
+                        $('#image-wrapper').append($newImageThumbnail);
+                    }
+          }
+
+          reader.readAsDataURL(input.files[i]);
+      }
+    }
+    function makeElement(element, options) {
+        var $elem = document.createElement(element);
+        $.each(options, function (key, value) {
+            $elem.setAttribute(key, value);
+        });
+        return $elem;
+    }
+  }
+
+
+  $("#upload-image").change(function(){
+      displayThumbnail(this);
+  });
 });
 
