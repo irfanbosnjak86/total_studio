@@ -32,13 +32,10 @@
         
           <div id="blocks">
                 <%= f.simple_fields_for :post_images do |slika| %>
-                    <% if slika.object.photo_file_name.present? %>
-                          <div class="image-wrapper" >
-                            <%= image_tag slika.object.photo.url('medium') %>
-                          </div><!-- end image wrapper --> 
-                    <% end %>
-                     <%= render 'jquery_file_fields', f: slika %>
                    
+                  <%= render 'post_image_fields', f: slika %>
+
+                  <%= link_to_add_association 'Dodaj Sliku', f, :post_images, class: "btn btn-success add-button" %>
                 <% end %>
           </div><!-- end images -->
       </div><!-- end col-md-6 -->
