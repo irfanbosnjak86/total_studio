@@ -26,7 +26,7 @@ class Admin::PostsController < ApplicationController
   end
 
   def update
-    if @post.update(post_params)
+    if @post.update_attributes(post_params)
       redirect_to ([ :admin, @post ])
     else
       render 'edit'
