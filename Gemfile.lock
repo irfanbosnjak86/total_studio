@@ -205,7 +205,7 @@ DEPENDENCIES
   devise (~> 3.5, >= 3.5.3)
   font-awesome-rails
   jbuilder (~> 2.0)
-  jquery-fileupload-rails (~> 0.4.6)
+  jquery-fileupload-rails
   jquery-rails
   jquery-turbolinks
   kaminari

@@ -38,7 +38,9 @@ gem 'cocoon', '~> 1.2', '>= 1.2.6'
 #Authentication 
 gem 'devise', '~> 3.5', '>= 3.5.3'
 #Jquery Upload
-gem 'jquery-fileupload-rails', '~> 0.4.6'
+gem 'jquery-fileupload-rails'
+#gem 'jquery.fileupload-rails'
+#gem 'dropzonejs-rails'
 gem 'shareable'
 
 
