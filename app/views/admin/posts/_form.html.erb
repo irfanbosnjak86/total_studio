@@ -32,9 +32,10 @@
         
           <div id="blocks">
                 <%= f.simple_fields_for :post_images do |slika| %>
-                   
+                  <div id="image-wrapper" ></div>
+                                                        
                   <%= render 'post_image_fields', f: slika %>
-
+                   
                   <%= link_to_add_association 'Dodaj Sliku', f, :post_images, class: "btn btn-success add-button" %>
                 <% end %>
           </div><!-- end images -->

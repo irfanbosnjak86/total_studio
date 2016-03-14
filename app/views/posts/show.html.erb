@@ -18,7 +18,7 @@
     <div class="images">
       <% @post.post_images.each do |images| %>
         <div class="image-wrapper">
-          <%= image_tag images.photo.url(:medium) %>
+          <%= image_tag images.photo.url %>
         </div>
       <% end %>
     </div>

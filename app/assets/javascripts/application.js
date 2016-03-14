@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery-fileupload
 //= require jquery.turbolinks
 //= require cocoon
 //= require turbolinks
@@ -46,6 +45,5 @@ $(document).ready(function(){
     $('html, body').animate({scrollTop : 0},800);
     return false;
   });
-
 });
 
