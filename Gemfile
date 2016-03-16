@@ -12,7 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -30,9 +30,9 @@ gem 'simple_form', '~> 3.2'
 #Pagination Gem Kaminari
 gem 'kaminari'
 #Paperclip gem for images.
-#gem 'paperclip', '~> 4.3', '>= 4.3.1'
+gem 'paperclip', '~> 4.3', '>= 4.3.1'
 #Setting images to dropbox
-gem 'paperclip-dropbox', '~> 1.3', '>= 1.3.2'
+#gem 'paperclip-dropbox', '~> 1.3', '>= 1.3.2'
 #NEsted forms gem
 gem 'cocoon', '~> 1.2', '>= 1.2.6'
 #Authentication 
@@ -46,7 +46,7 @@ gem 'shareable'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'rails_12factor', group: :production
+#gem 'rails_12factor', group: :production
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
