@@ -1,0 +1,15 @@
+/home/mobutuseseku/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20160316-12070-l0u2a9.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+compiling crypt.c
+compiling bcrypt_ext.c
+linking shared-object bcrypt_ext.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20160316-12070-1lfj82d

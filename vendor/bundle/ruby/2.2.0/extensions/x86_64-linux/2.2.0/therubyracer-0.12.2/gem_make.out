@@ -1,0 +1,39 @@
+/home/mobutuseseku/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20160316-12070-zs6lhq.rb extconf.rb
+checking for main() in -lpthread... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling invocation.cc
+compiling exception.cc
+compiling external.cc
+compiling stack.cc
+compiling message.cc
+compiling gc.cc
+compiling function.cc
+compiling object.cc
+compiling signature.cc
+compiling value.cc
+compiling accessor.cc
+compiling primitive.cc
+compiling constraints.cc
+compiling locker.cc
+compiling init.cc
+compiling heap.cc
+compiling array.cc
+compiling constants.cc
+compiling script.cc
+compiling template.cc
+compiling v8.cc
+compiling handles.cc
+compiling context.cc
+compiling date.cc
+compiling rr.cc
+compiling trycatch.cc
+compiling string.cc
+compiling backref.cc
+linking shared-object v8/init.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 init.so ./.gem.20160316-12070-sbyfem/v8
