@@ -12,10 +12,11 @@
       </div>
 
       <div class="description" >
-        <p><%= @about.description %></p>
+        <p><%= simple_format @about.description %></p>
       </div><!-- end descritpion -->
     </div><!-- end col-12 -->
   </div><!-- end row -->
 </div><!-- end page-wrapper -->
 </div><!-- end container -->
-
+<% content_for :title, "About" %>
+<% content_for :description, @about.description %>

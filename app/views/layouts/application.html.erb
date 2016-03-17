@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TOTAL STUDIO - se bavi fotografijom, videom i grafičkim dizajnom! PROFESIONALNA IZRADA FOTOGRAFIJA, FOTOGRAFISANJE VENČANJA,SNIMANJE VENČANJA, PROSLAVA, STUDIJSKA FOTOGRAFIJA, modna fotografija, FOTO pokloni, GRAFIČKI DIZAJN, snimanje spotova i reklama.</title>
+  <title>TOTAL STUDIO | <%= yield(:title) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="description" content="<%= yield(:description) %>">
+  <meta name="author" content="Vladimir Milic">
+  <meta name="keywords" content="kosovo, mitrovica, fotografije, modna fotografija, reklama, vencanja, video dizajn, graficki dizajn, vladimir milic, snimanje, spot " />
 </head>
 <body>
 

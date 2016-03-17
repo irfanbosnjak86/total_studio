@@ -5,9 +5,17 @@
       <div class="form-inputs">
         <%= f.input :title, label: "Naslov", autofocus: true, input_html: { class: 'form-control' } %>
         <br>
+        <p>Tag <span class="highLT">&lt;</span><span class="highELE">br</span><span class="highGT">&gt;</span>  prestavlja novi prazan red</p>
+        <p> Prelazak u novi red pritiskom dugme Enter</p>
         <%= f.input :description, label: "Opis", input_html: { class: 'form-control' } %>
-
-        <%= f.file_field :photo %> 
+        <br>
+        <% if f.object.photo_file_name.present? %>
+          <div class="image-wrapper" >
+            <%= image_tag f.object.photo.url %>
+          </div><!-- end image wrapper --> 
+          <% end %>
+        <center><%= f.file_field :photo %></center>
+        <br>   
       </div>
 
       <div class="form-actions">
