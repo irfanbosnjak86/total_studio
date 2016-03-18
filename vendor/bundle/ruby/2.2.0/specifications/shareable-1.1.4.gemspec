@@ -12,10 +12,10 @@ Gem::Specification.new do |s|
   s.description = "Add social sharing functionality to your Rails app with one method call. Shareable allows you the choice of displaying javascript buttons or static links. Configuration options for each social site are ready-to-use and entirely customizable. Please see readme for more details."
   s.homepage = "http://github.com/hermango/shareable"
   s.licenses = ["MIT"]
-  s.rubygems_version = "2.4.6"
+  s.rubygems_version = "2.4.5.1"
   s.summary = "Simple and unobtrusive gem for adding social links to your Rails app. Rails 3 and 4 supported."
 
-  s.installed_by_version = "2.4.6" if s.respond_to? :installed_by_version
+  s.installed_by_version = "2.4.5.1" if s.respond_to? :installed_by_version
 
   if s.respond_to? :specification_version then
     s.specification_version = 4
