@@ -18,11 +18,24 @@
     <% end %>
 
     <div class="images">
-      <% @post.post_images.each do |images| %>
-        <div class="image-wrapper" id="images-show">
-          <%= image_tag images.photo.url %>
-        </div>
-      <% end %>
+  
+        <% if @post.videos(params[:url]).empty? %>
+            
+            <% @post.post_images.each do |f| %>
+              <div class="image-wrapper" id="images-show">
+                <%= image_tag f.photo.url %>
+              </div>
+
+            <% end %>
+          <% else %>
+            
+            <% @post.post_images.drop(1).each do |images| %>
+              <div class="image-wrapper" id="images-show">
+                <%= image_tag images.photo.url %>
+              </div>
+            <% end %>
+        <% end %>
+
     </div>
 
     <div class="videos">
