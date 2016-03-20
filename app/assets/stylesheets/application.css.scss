@@ -682,6 +682,8 @@ a#postTitle {
    background-image:none !important;
    filter:none !important;
   }
+  .carousel .carousel-control { visibility: hidden; }
+  .carousel:hover .carousel-control { visibility: visible; }
   
   .carousel-control {
     opacity: 0;

@@ -49,5 +49,9 @@ $(document).ready(function(){
   $('img').bind('contextmenu', function(e) {
     return false;
   }); 
+
+  $('.carousel').carousel({
+      interval: 6000
+    })
 });
 
