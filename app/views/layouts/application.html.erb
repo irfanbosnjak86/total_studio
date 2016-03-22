@@ -9,6 +9,12 @@
   <meta name="description" content="<%= yield(:description) %>">
   <meta name="author" content="Vladimir Milic">
   <meta name="keywords" content="kosovo, mitrovica, fotograf, modna, reklama, vencanja, video, produkcija, graficki, dizajn, vladimir milic, snimanje, muzicki spot, photo, foto,  wedding, grafika, photographer, art, design" />
+  <meta property="og:url"           content="<%= request.url %>" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="<%= yield(:title) %>" />
+  <meta property="og:description"   content="<%= yield(:description) %>" />
+  <meta property="og:image"         content="<%= image_url('logo.jpg') %>" />
+
 </head>
 <body>
 
