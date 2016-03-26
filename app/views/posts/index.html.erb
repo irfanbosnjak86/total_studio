@@ -16,7 +16,7 @@
 
 									<div id="overlay">
 										<div class="title">
-											<h2><%= link_to post.title.upcase, post %></h2>	
+											<h2><%= link_to post.title.mb_chars.upcase.to_s, post %></h2>	
 										</div><!-- end title -->
 									</div><!-- end overlay -->
 								</div><!-- end box -->
