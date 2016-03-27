@@ -34,12 +34,12 @@
           <h3>Slike za Post</h3>
         
           <div id="blocks">
+             <%= link_to_add_association 'Dodaj Sliku', f, :post_images, class: "btn btn-success add-button" %>
                 <%= f.simple_fields_for :post_images do |slika| %>
                   <div id="image-wrapper" ></div>
                                                         
                   <%= render 'post_image_fields', f: slika %>
-                   
-                  <%= link_to_add_association 'Dodaj Sliku', f, :post_images, class: "btn btn-success add-button" %>
+                  
                 <% end %>
           </div><!-- end images -->
       </div><!-- end col-md-6 -->
@@ -50,11 +50,12 @@
               <%= f.simple_fields_for :videos do |snimak| %>
               
                   <%= render 'video_fields', f: snimak %>
-
-                  <div class="buttons">
-                    <%= link_to_add_association 'Dodaj Video', f, :videos, class: "btn btn-success add-button" %>
-                  </div><!-- end links -->
+     
               <% end %>
+              <div class="buttons">
+                <%= link_to_add_association 'Dodaj Video', f, :videos, class: "btn btn-success add-button" %>
+              </div><!-- end links -->
+
         </div><!-- end videos -->
       </div><!-- end col-md-6 -->  
       <br>
